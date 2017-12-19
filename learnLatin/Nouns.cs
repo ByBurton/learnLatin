@@ -29,17 +29,17 @@ namespace learnLatin
             this.fillNomensListeFromTextFile();
 
             if(this.NomensListe.Count == 0)
-                FillNomenList();
+                FillNomenListWithDefaults();
 
             this.btn_NaechstesNomen.PerformClick();
         }
 
-        public void FillNomenList()
+        public void FillNomenListWithDefaults()
         {
-            this.NomensListe.Add(new Nomen("servus", "servi", "servo", "servum", "servo", "servi", "servorum", "servis", "servos", "servis"));
-            this.NomensListe.Add(new Nomen("amica", "amicae", "amicae", "amicam", "amica", "amicae", "amicarum", "amicis", "amicas", "amicis"));
-            this.NomensListe.Add(new Nomen("mercator", "mercatoris", "mercatori", "mercatorem", "mercatore", "mercatores", "mercatorum", "mercatoribus", "mercatores", "mercatoribus"));
-            this.NomensListe.Add(new Nomen("forum", "fori", "foro", "forum", "foro", "fora", "fororum", "foris", "fora", "foris"));
+            this.NomensListe.Add(new Nomen("servus", "servi", "servo", "servum", "servo", "servi", "servorum", "servis", "servos", "servis", "Sklave"));
+            this.NomensListe.Add(new Nomen("amica", "amicae", "amicae", "amicam", "amica", "amicae", "amicarum", "amicis", "amicas", "amicis", "Freundin"));
+            this.NomensListe.Add(new Nomen("mercator", "mercatoris", "mercatori", "mercatorem", "mercatore", "mercatores", "mercatorum", "mercatoribus", "mercatores", "mercatoribus", "Kaufmann"));
+            this.NomensListe.Add(new Nomen("forum", "fori", "foro", "forum", "foro", "fora", "fororum", "foris", "fora", "foris", "Marktplatz, Forum, Öffentlichkeit"));
         }
 
         private void btn_NaechstesNomen_Click(Object sender, EventArgs e)
@@ -47,6 +47,14 @@ namespace learnLatin
             this.ausgewaehltesNomen = CollectionExtension.RandomElement(this.NomensListe);
 
             this.txtBox_NominativSingular.Text = this.ausgewaehltesNomen.NominativSingular;
+
+            this.clearTextBoxes();
+        }
+
+        private void clearTextBoxes()
+        {
+            this.txtBox_ZuDeutsch.Text = String.Empty;
+
             this.txtBox_GenitivSingular.Text = String.Empty;
             this.txtBox_DativSingular.Text = String.Empty;
             this.txtBox_AkkusativSingular.Text = String.Empty;
@@ -61,6 +69,8 @@ namespace learnLatin
 
         private void btn_LueckenFuellen_Click(Object sender, EventArgs e)
         {
+            this.txtBox_ZuDeutsch.Text = this.ausgewaehltesNomen.ZuDeutsch;
+
             this.txtBox_GenitivSingular.Text = this.ausgewaehltesNomen.GenitivSingular;
             this.txtBox_DativSingular.Text = this.ausgewaehltesNomen.DativSingular;
             this.txtBox_AkkusativSingular.Text = this.ausgewaehltesNomen.AkkusativSingular;
@@ -89,12 +99,12 @@ namespace learnLatin
                 String line = String.Empty;
 
                 String singular = nomen.NominativSingular + ";" + nomen.GenitivSingular + ";" + nomen.DativSingular + ";" + nomen.AkkusativSingular + ";" +
-                    nomen.AblativSingular + nomen.VokativSingular + ";" + nomen.LokativSingular + "#";
+                    nomen.AblativSingular + ";" + nomen.VokativSingular + ";" + nomen.LokativSingular + "#";
                 String plural = nomen.NominativPlural + ";" + nomen.GenitivPlural + ";" + nomen.DativPlural + ";" + nomen.AkkusativPlural + ";" + nomen.AblativPlural + ";" + nomen.VokativPlural + ";" + nomen.LokativPlural;
 
-                line = singular + plural;
+                line = singular + plural + "#" + nomen.ZuDeutsch;
 
-                Console.WriteLine(line);
+                writer.WriteLine(line);
             }
 
             writer.Close();
@@ -119,10 +129,11 @@ namespace learnLatin
             while((line = reader.ReadLine()) != null)
             {
                 Nomen nomen = new Nomen(String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty,
-                    String.Empty, String.Empty);
+                    String.Empty, String.Empty, String.Empty);
 
                 String[] singular = line.Split('#')[0].Split(';');
                 String[] plural = line.Split('#')[1].Split(';');
+                String zuDeutsch = line.Split('#')[2];
 
                 nomen.NominativSingular = singular[0];
                 nomen.GenitivSingular = singular[1];
@@ -140,6 +151,8 @@ namespace learnLatin
                 nomen.VokativPlural = plural[5];
                 nomen.LokativPlural = plural[6];
 
+                nomen.ZuDeutsch = zuDeutsch;
+
                 this.NomensListe.Add(nomen);
             }
 
@@ -152,6 +165,25 @@ namespace learnLatin
         {
             this.saveNomensListeAsTextFile();
         }
+
+        private void btn_NomenHinzufuegen_Click(Object sender, EventArgs e)
+        {
+            Nomen nomen = new Nomen(this.txtBox_NominativSingular.Text, this.txtBox_GenitivSingular.Text, this.txtBox_DativSingular.Text, this.txtBox_AkkusativSingular.Text,
+                this.txtBox_AblativSingular.Text, this.txtBox_NominativPlural.Text, this.txtBox_GenitivPlural.Text, this.txtBox_DativPlural.Text, this.txtBox_AkkusativPlural.Text,
+                this.txtBox_AblativPlural.Text, this.txtBox_ZuDeutsch.Text);
+
+            nomen.AddLokativ(String.Empty, String.Empty);
+            nomen.AddVokativ(String.Empty, String.Empty);
+
+            this.NomensListe.Add(nomen);
+            nomen = null;
+
+            this.saveNomensListeAsTextFile();
+
+            MessageBox.Show("Das Nomen wurde erfolgreich hinzugefügt!");
+
+            this.btn_NaechstesNomen.PerformClick();
+        }
     }
 
 
@@ -163,6 +195,8 @@ namespace learnLatin
 
     public class Nomen
     {
+        public String ZuDeutsch;
+
         public String NominativSingular;
         public String GenitivSingular;
         public String DativSingular;
@@ -194,8 +228,10 @@ namespace learnLatin
         }
 
         public Nomen(String NominativSingular, String GenitivSingular, String DativSingular, String AkkusativSingular, String AblativSingular,
-            String NominativPlural, String GenitivPlural, String DativPlural, String AkkusativPlural, String AblativPlural)
+            String NominativPlural, String GenitivPlural, String DativPlural, String AkkusativPlural, String AblativPlural, String ZuDeutsch)
         {
+            this.ZuDeutsch = ZuDeutsch;
+
             this.NominativSingular = NominativSingular;
             this.GenitivSingular = GenitivSingular;
             this.DativSingular = DativSingular;

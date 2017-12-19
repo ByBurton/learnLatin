@@ -106,7 +106,7 @@
             this.txtBox_ZweitePersonPluralFutur_IIndikativ = new System.Windows.Forms.TextBox();
             this.txtBox_ZweitePersonSingularFutur_IIndikativ = new System.Windows.Forms.TextBox();
             this.txtBox_ErstePersonPluralFutur_IIndikativ = new System.Windows.Forms.TextBox();
-            this.txtBox_ErstePersonSingularFutur_IImperfekt = new System.Windows.Forms.TextBox();
+            this.txtBox_ErstePersonSingularFutur_IIndikativ = new System.Windows.Forms.TextBox();
             this.txtBox_DrittePersonPluralFutur_IIIndikativ = new System.Windows.Forms.TextBox();
             this.txtBox_DrittePersonSingularFutur_IIIndikativ = new System.Windows.Forms.TextBox();
             this.txtBox_ZweitePersonPluralFutur_IIIndikativ = new System.Windows.Forms.TextBox();
@@ -133,24 +133,29 @@
             this.txtBox_ErstePersonSingularPerfektKonjunktiv = new System.Windows.Forms.TextBox();
             this.lbl_Infinitiv = new System.Windows.Forms.Label();
             this.txtBox_Infinitiv = new System.Windows.Forms.TextBox();
+            this.btn_VerbHinzufuegen = new System.Windows.Forms.Button();
+            this.lbl_ZuDeutsch = new System.Windows.Forms.Label();
+            this.txtBox_ZuDeutsch = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_LueckenFuellen
             // 
-            this.btn_LueckenFuellen.Location = new System.Drawing.Point(592, 592);
+            this.btn_LueckenFuellen.Location = new System.Drawing.Point(789, 729);
+            this.btn_LueckenFuellen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_LueckenFuellen.Name = "btn_LueckenFuellen";
-            this.btn_LueckenFuellen.Size = new System.Drawing.Size(112, 23);
-            this.btn_LueckenFuellen.TabIndex = 3;
+            this.btn_LueckenFuellen.Size = new System.Drawing.Size(149, 28);
+            this.btn_LueckenFuellen.TabIndex = 62;
             this.btn_LueckenFuellen.Text = "Lücken aufdecken";
             this.btn_LueckenFuellen.UseVisualStyleBackColor = true;
             this.btn_LueckenFuellen.Click += new System.EventHandler(this.btn_LueckenFuellen_Click);
             // 
             // btn_NaechstesVerb
             // 
-            this.btn_NaechstesVerb.Location = new System.Drawing.Point(736, 592);
+            this.btn_NaechstesVerb.Location = new System.Drawing.Point(981, 729);
+            this.btn_NaechstesVerb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_NaechstesVerb.Name = "btn_NaechstesVerb";
-            this.btn_NaechstesVerb.Size = new System.Drawing.Size(112, 23);
-            this.btn_NaechstesVerb.TabIndex = 2;
+            this.btn_NaechstesVerb.Size = new System.Drawing.Size(149, 28);
+            this.btn_NaechstesVerb.TabIndex = 63;
             this.btn_NaechstesVerb.Text = "Nächstes Verb";
             this.btn_NaechstesVerb.UseVisualStyleBackColor = true;
             this.btn_NaechstesVerb.Click += new System.EventHandler(this.btn_NaechstesVerb_Click);
@@ -158,813 +163,950 @@
             // lbl_Indikativ
             // 
             this.lbl_Indikativ.AutoSize = true;
-            this.lbl_Indikativ.Location = new System.Drawing.Point(352, 8);
+            this.lbl_Indikativ.Location = new System.Drawing.Point(469, 10);
+            this.lbl_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Indikativ.Name = "lbl_Indikativ";
-            this.lbl_Indikativ.Size = new System.Drawing.Size(47, 13);
+            this.lbl_Indikativ.Size = new System.Drawing.Size(59, 17);
             this.lbl_Indikativ.TabIndex = 4;
             this.lbl_Indikativ.Text = "Indikativ";
             // 
             // lbl_Konjunktiv
             // 
             this.lbl_Konjunktiv.AutoSize = true;
-            this.lbl_Konjunktiv.Location = new System.Drawing.Point(1080, 8);
+            this.lbl_Konjunktiv.Location = new System.Drawing.Point(1440, 10);
+            this.lbl_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Konjunktiv.Name = "lbl_Konjunktiv";
-            this.lbl_Konjunktiv.Size = new System.Drawing.Size(57, 13);
+            this.lbl_Konjunktiv.Size = new System.Drawing.Size(73, 17);
             this.lbl_Konjunktiv.TabIndex = 5;
             this.lbl_Konjunktiv.Text = "Konjunktiv";
             // 
             // lbl_Praesens_Indikativ
             // 
             this.lbl_Praesens_Indikativ.AutoSize = true;
-            this.lbl_Praesens_Indikativ.Location = new System.Drawing.Point(352, 40);
+            this.lbl_Praesens_Indikativ.Location = new System.Drawing.Point(469, 49);
+            this.lbl_Praesens_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Praesens_Indikativ.Name = "lbl_Praesens_Indikativ";
-            this.lbl_Praesens_Indikativ.Size = new System.Drawing.Size(45, 13);
+            this.lbl_Praesens_Indikativ.Size = new System.Drawing.Size(60, 17);
             this.lbl_Praesens_Indikativ.TabIndex = 6;
             this.lbl_Praesens_Indikativ.Text = "Präsens";
             // 
             // lbl_Perfekt_Indikativ
             // 
             this.lbl_Perfekt_Indikativ.AutoSize = true;
-            this.lbl_Perfekt_Indikativ.Location = new System.Drawing.Point(128, 192);
+            this.lbl_Perfekt_Indikativ.Location = new System.Drawing.Point(171, 236);
+            this.lbl_Perfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Perfekt_Indikativ.Name = "lbl_Perfekt_Indikativ";
-            this.lbl_Perfekt_Indikativ.Size = new System.Drawing.Size(41, 13);
+            this.lbl_Perfekt_Indikativ.Size = new System.Drawing.Size(53, 17);
             this.lbl_Perfekt_Indikativ.TabIndex = 7;
             this.lbl_Perfekt_Indikativ.Text = "Perfekt";
             // 
             // lbl_Plusquamperfekt_Indikativ
             // 
             this.lbl_Plusquamperfekt_Indikativ.AutoSize = true;
-            this.lbl_Plusquamperfekt_Indikativ.Location = new System.Drawing.Point(552, 192);
+            this.lbl_Plusquamperfekt_Indikativ.Location = new System.Drawing.Point(736, 236);
+            this.lbl_Plusquamperfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Plusquamperfekt_Indikativ.Name = "lbl_Plusquamperfekt_Indikativ";
-            this.lbl_Plusquamperfekt_Indikativ.Size = new System.Drawing.Size(86, 13);
+            this.lbl_Plusquamperfekt_Indikativ.Size = new System.Drawing.Size(114, 17);
             this.lbl_Plusquamperfekt_Indikativ.TabIndex = 8;
             this.lbl_Plusquamperfekt_Indikativ.Text = "Plusquamperfekt";
             // 
             // lbl_Imperfekt_Indikativ
             // 
             this.lbl_Imperfekt_Indikativ.AutoSize = true;
-            this.lbl_Imperfekt_Indikativ.Location = new System.Drawing.Point(344, 192);
+            this.lbl_Imperfekt_Indikativ.Location = new System.Drawing.Point(459, 236);
+            this.lbl_Imperfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Imperfekt_Indikativ.Name = "lbl_Imperfekt_Indikativ";
-            this.lbl_Imperfekt_Indikativ.Size = new System.Drawing.Size(51, 13);
+            this.lbl_Imperfekt_Indikativ.Size = new System.Drawing.Size(66, 17);
             this.lbl_Imperfekt_Indikativ.TabIndex = 9;
             this.lbl_Imperfekt_Indikativ.Text = "Imperfekt";
             // 
             // lbl_Futur_I_Indikativ
             // 
             this.lbl_Futur_I_Indikativ.AutoSize = true;
-            this.lbl_Futur_I_Indikativ.Location = new System.Drawing.Point(232, 376);
+            this.lbl_Futur_I_Indikativ.Location = new System.Drawing.Point(309, 463);
+            this.lbl_Futur_I_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Futur_I_Indikativ.Name = "lbl_Futur_I_Indikativ";
-            this.lbl_Futur_I_Indikativ.Size = new System.Drawing.Size(37, 13);
+            this.lbl_Futur_I_Indikativ.Size = new System.Drawing.Size(48, 17);
             this.lbl_Futur_I_Indikativ.TabIndex = 10;
             this.lbl_Futur_I_Indikativ.Text = "Futur I";
             // 
             // lbl_Futur_II_Indikativ
             // 
             this.lbl_Futur_II_Indikativ.AutoSize = true;
-            this.lbl_Futur_II_Indikativ.Location = new System.Drawing.Point(472, 376);
+            this.lbl_Futur_II_Indikativ.Location = new System.Drawing.Point(629, 463);
+            this.lbl_Futur_II_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Futur_II_Indikativ.Name = "lbl_Futur_II_Indikativ";
-            this.lbl_Futur_II_Indikativ.Size = new System.Drawing.Size(40, 13);
+            this.lbl_Futur_II_Indikativ.Size = new System.Drawing.Size(51, 17);
             this.lbl_Futur_II_Indikativ.TabIndex = 11;
             this.lbl_Futur_II_Indikativ.Text = "Futur II";
             // 
             // lbl_Imperfekt_Konjunktiv
             // 
             this.lbl_Imperfekt_Konjunktiv.AutoSize = true;
-            this.lbl_Imperfekt_Konjunktiv.Location = new System.Drawing.Point(1072, 192);
+            this.lbl_Imperfekt_Konjunktiv.Location = new System.Drawing.Point(1429, 236);
+            this.lbl_Imperfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Imperfekt_Konjunktiv.Name = "lbl_Imperfekt_Konjunktiv";
-            this.lbl_Imperfekt_Konjunktiv.Size = new System.Drawing.Size(51, 13);
+            this.lbl_Imperfekt_Konjunktiv.Size = new System.Drawing.Size(66, 17);
             this.lbl_Imperfekt_Konjunktiv.TabIndex = 15;
             this.lbl_Imperfekt_Konjunktiv.Text = "Imperfekt";
             // 
             // lbl_Plusquamperfekt_Konjunktiv
             // 
             this.lbl_Plusquamperfekt_Konjunktiv.AutoSize = true;
-            this.lbl_Plusquamperfekt_Konjunktiv.Location = new System.Drawing.Point(1280, 192);
+            this.lbl_Plusquamperfekt_Konjunktiv.Location = new System.Drawing.Point(1707, 236);
+            this.lbl_Plusquamperfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Plusquamperfekt_Konjunktiv.Name = "lbl_Plusquamperfekt_Konjunktiv";
-            this.lbl_Plusquamperfekt_Konjunktiv.Size = new System.Drawing.Size(86, 13);
+            this.lbl_Plusquamperfekt_Konjunktiv.Size = new System.Drawing.Size(114, 17);
             this.lbl_Plusquamperfekt_Konjunktiv.TabIndex = 14;
             this.lbl_Plusquamperfekt_Konjunktiv.Text = "Plusquamperfekt";
             // 
             // lbl_Perfekt_Konjunktiv
             // 
             this.lbl_Perfekt_Konjunktiv.AutoSize = true;
-            this.lbl_Perfekt_Konjunktiv.Location = new System.Drawing.Point(856, 192);
+            this.lbl_Perfekt_Konjunktiv.Location = new System.Drawing.Point(1141, 236);
+            this.lbl_Perfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Perfekt_Konjunktiv.Name = "lbl_Perfekt_Konjunktiv";
-            this.lbl_Perfekt_Konjunktiv.Size = new System.Drawing.Size(41, 13);
+            this.lbl_Perfekt_Konjunktiv.Size = new System.Drawing.Size(53, 17);
             this.lbl_Perfekt_Konjunktiv.TabIndex = 13;
             this.lbl_Perfekt_Konjunktiv.Text = "Perfekt";
             // 
             // lbl_Praesens_Konjunktiv
             // 
             this.lbl_Praesens_Konjunktiv.AutoSize = true;
-            this.lbl_Praesens_Konjunktiv.Location = new System.Drawing.Point(1080, 48);
+            this.lbl_Praesens_Konjunktiv.Location = new System.Drawing.Point(1440, 59);
+            this.lbl_Praesens_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Praesens_Konjunktiv.Name = "lbl_Praesens_Konjunktiv";
-            this.lbl_Praesens_Konjunktiv.Size = new System.Drawing.Size(45, 13);
+            this.lbl_Praesens_Konjunktiv.Size = new System.Drawing.Size(60, 17);
             this.lbl_Praesens_Konjunktiv.TabIndex = 12;
             this.lbl_Praesens_Konjunktiv.Text = "Präsens";
             // 
             // lbl_ErstePerson_Praesens
             // 
             this.lbl_ErstePerson_Praesens.AutoSize = true;
-            this.lbl_ErstePerson_Praesens.Location = new System.Drawing.Point(8, 72);
+            this.lbl_ErstePerson_Praesens.Location = new System.Drawing.Point(11, 89);
+            this.lbl_ErstePerson_Praesens.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ErstePerson_Praesens.Name = "lbl_ErstePerson_Praesens";
-            this.lbl_ErstePerson_Praesens.Size = new System.Drawing.Size(52, 13);
+            this.lbl_ErstePerson_Praesens.Size = new System.Drawing.Size(69, 17);
             this.lbl_ErstePerson_Praesens.TabIndex = 18;
             this.lbl_ErstePerson_Praesens.Text = "1. Person";
             // 
             // lbl_ZweitePerson_Praesens
             // 
             this.lbl_ZweitePerson_Praesens.AutoSize = true;
-            this.lbl_ZweitePerson_Praesens.Location = new System.Drawing.Point(8, 96);
+            this.lbl_ZweitePerson_Praesens.Location = new System.Drawing.Point(11, 118);
+            this.lbl_ZweitePerson_Praesens.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ZweitePerson_Praesens.Name = "lbl_ZweitePerson_Praesens";
-            this.lbl_ZweitePerson_Praesens.Size = new System.Drawing.Size(52, 13);
+            this.lbl_ZweitePerson_Praesens.Size = new System.Drawing.Size(69, 17);
             this.lbl_ZweitePerson_Praesens.TabIndex = 19;
             this.lbl_ZweitePerson_Praesens.Text = "2. Person";
             // 
             // lbl_DrittePerson_Praesens
             // 
             this.lbl_DrittePerson_Praesens.AutoSize = true;
-            this.lbl_DrittePerson_Praesens.Location = new System.Drawing.Point(8, 120);
+            this.lbl_DrittePerson_Praesens.Location = new System.Drawing.Point(11, 148);
+            this.lbl_DrittePerson_Praesens.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DrittePerson_Praesens.Name = "lbl_DrittePerson_Praesens";
-            this.lbl_DrittePerson_Praesens.Size = new System.Drawing.Size(52, 13);
+            this.lbl_DrittePerson_Praesens.Size = new System.Drawing.Size(69, 17);
             this.lbl_DrittePerson_Praesens.TabIndex = 20;
             this.lbl_DrittePerson_Praesens.Text = "3. Person";
             // 
             // lbl_DrittePerson_Vergangenheit
             // 
             this.lbl_DrittePerson_Vergangenheit.AutoSize = true;
-            this.lbl_DrittePerson_Vergangenheit.Location = new System.Drawing.Point(0, 272);
+            this.lbl_DrittePerson_Vergangenheit.Location = new System.Drawing.Point(0, 335);
+            this.lbl_DrittePerson_Vergangenheit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DrittePerson_Vergangenheit.Name = "lbl_DrittePerson_Vergangenheit";
-            this.lbl_DrittePerson_Vergangenheit.Size = new System.Drawing.Size(52, 13);
+            this.lbl_DrittePerson_Vergangenheit.Size = new System.Drawing.Size(69, 17);
             this.lbl_DrittePerson_Vergangenheit.TabIndex = 23;
             this.lbl_DrittePerson_Vergangenheit.Text = "3. Person";
             // 
             // lbl_ZweitePerson_Vergangenheit
             // 
             this.lbl_ZweitePerson_Vergangenheit.AutoSize = true;
-            this.lbl_ZweitePerson_Vergangenheit.Location = new System.Drawing.Point(0, 248);
+            this.lbl_ZweitePerson_Vergangenheit.Location = new System.Drawing.Point(0, 305);
+            this.lbl_ZweitePerson_Vergangenheit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ZweitePerson_Vergangenheit.Name = "lbl_ZweitePerson_Vergangenheit";
-            this.lbl_ZweitePerson_Vergangenheit.Size = new System.Drawing.Size(52, 13);
+            this.lbl_ZweitePerson_Vergangenheit.Size = new System.Drawing.Size(69, 17);
             this.lbl_ZweitePerson_Vergangenheit.TabIndex = 22;
             this.lbl_ZweitePerson_Vergangenheit.Text = "2. Person";
             // 
             // lbl_ErstePerson_Vergangenheit
             // 
             this.lbl_ErstePerson_Vergangenheit.AutoSize = true;
-            this.lbl_ErstePerson_Vergangenheit.Location = new System.Drawing.Point(0, 224);
+            this.lbl_ErstePerson_Vergangenheit.Location = new System.Drawing.Point(0, 276);
+            this.lbl_ErstePerson_Vergangenheit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ErstePerson_Vergangenheit.Name = "lbl_ErstePerson_Vergangenheit";
-            this.lbl_ErstePerson_Vergangenheit.Size = new System.Drawing.Size(52, 13);
+            this.lbl_ErstePerson_Vergangenheit.Size = new System.Drawing.Size(69, 17);
             this.lbl_ErstePerson_Vergangenheit.TabIndex = 21;
             this.lbl_ErstePerson_Vergangenheit.Text = "1. Person";
             // 
             // lbl_DrittePerson_Futur
             // 
             this.lbl_DrittePerson_Futur.AutoSize = true;
-            this.lbl_DrittePerson_Futur.Location = new System.Drawing.Point(8, 464);
+            this.lbl_DrittePerson_Futur.Location = new System.Drawing.Point(11, 571);
+            this.lbl_DrittePerson_Futur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DrittePerson_Futur.Name = "lbl_DrittePerson_Futur";
-            this.lbl_DrittePerson_Futur.Size = new System.Drawing.Size(52, 13);
+            this.lbl_DrittePerson_Futur.Size = new System.Drawing.Size(69, 17);
             this.lbl_DrittePerson_Futur.TabIndex = 26;
             this.lbl_DrittePerson_Futur.Text = "3. Person";
             // 
             // lbl_ZweitePerson_Futur
             // 
             this.lbl_ZweitePerson_Futur.AutoSize = true;
-            this.lbl_ZweitePerson_Futur.Location = new System.Drawing.Point(8, 440);
+            this.lbl_ZweitePerson_Futur.Location = new System.Drawing.Point(11, 542);
+            this.lbl_ZweitePerson_Futur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ZweitePerson_Futur.Name = "lbl_ZweitePerson_Futur";
-            this.lbl_ZweitePerson_Futur.Size = new System.Drawing.Size(52, 13);
+            this.lbl_ZweitePerson_Futur.Size = new System.Drawing.Size(69, 17);
             this.lbl_ZweitePerson_Futur.TabIndex = 25;
             this.lbl_ZweitePerson_Futur.Text = "2. Person";
             // 
             // lbl_ErstePerson_Futur
             // 
             this.lbl_ErstePerson_Futur.AutoSize = true;
-            this.lbl_ErstePerson_Futur.Location = new System.Drawing.Point(8, 416);
+            this.lbl_ErstePerson_Futur.Location = new System.Drawing.Point(11, 512);
+            this.lbl_ErstePerson_Futur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ErstePerson_Futur.Name = "lbl_ErstePerson_Futur";
-            this.lbl_ErstePerson_Futur.Size = new System.Drawing.Size(52, 13);
+            this.lbl_ErstePerson_Futur.Size = new System.Drawing.Size(69, 17);
             this.lbl_ErstePerson_Futur.TabIndex = 24;
             this.lbl_ErstePerson_Futur.Text = "1. Person";
             // 
             // lbl_SingularPraesens_Indikativ
             // 
             this.lbl_SingularPraesens_Indikativ.AutoSize = true;
-            this.lbl_SingularPraesens_Indikativ.Location = new System.Drawing.Point(296, 48);
+            this.lbl_SingularPraesens_Indikativ.Location = new System.Drawing.Point(395, 59);
+            this.lbl_SingularPraesens_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularPraesens_Indikativ.Name = "lbl_SingularPraesens_Indikativ";
-            this.lbl_SingularPraesens_Indikativ.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularPraesens_Indikativ.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularPraesens_Indikativ.TabIndex = 27;
             this.lbl_SingularPraesens_Indikativ.Text = "Singular";
             // 
             // lbl_PluralPraesens_Indikativ
             // 
             this.lbl_PluralPraesens_Indikativ.AutoSize = true;
-            this.lbl_PluralPraesens_Indikativ.Location = new System.Drawing.Point(408, 48);
+            this.lbl_PluralPraesens_Indikativ.Location = new System.Drawing.Point(544, 59);
+            this.lbl_PluralPraesens_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralPraesens_Indikativ.Name = "lbl_PluralPraesens_Indikativ";
-            this.lbl_PluralPraesens_Indikativ.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralPraesens_Indikativ.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralPraesens_Indikativ.TabIndex = 28;
             this.lbl_PluralPraesens_Indikativ.Text = "Plural";
             // 
             // lbl_PluralPerfekt_Indikativ
             // 
             this.lbl_PluralPerfekt_Indikativ.AutoSize = true;
-            this.lbl_PluralPerfekt_Indikativ.Location = new System.Drawing.Point(176, 208);
+            this.lbl_PluralPerfekt_Indikativ.Location = new System.Drawing.Point(235, 256);
+            this.lbl_PluralPerfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralPerfekt_Indikativ.Name = "lbl_PluralPerfekt_Indikativ";
-            this.lbl_PluralPerfekt_Indikativ.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralPerfekt_Indikativ.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralPerfekt_Indikativ.TabIndex = 30;
             this.lbl_PluralPerfekt_Indikativ.Text = "Plural";
             // 
             // lbl_SingularPerfekt_Indikativ
             // 
             this.lbl_SingularPerfekt_Indikativ.AutoSize = true;
-            this.lbl_SingularPerfekt_Indikativ.Location = new System.Drawing.Point(72, 208);
+            this.lbl_SingularPerfekt_Indikativ.Location = new System.Drawing.Point(96, 256);
+            this.lbl_SingularPerfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularPerfekt_Indikativ.Name = "lbl_SingularPerfekt_Indikativ";
-            this.lbl_SingularPerfekt_Indikativ.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularPerfekt_Indikativ.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularPerfekt_Indikativ.TabIndex = 29;
             this.lbl_SingularPerfekt_Indikativ.Text = "Singular";
             // 
             // lbl_PluralImperfekt_Indikativ
             // 
             this.lbl_PluralImperfekt_Indikativ.AutoSize = true;
-            this.lbl_PluralImperfekt_Indikativ.Location = new System.Drawing.Point(400, 208);
+            this.lbl_PluralImperfekt_Indikativ.Location = new System.Drawing.Point(533, 256);
+            this.lbl_PluralImperfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralImperfekt_Indikativ.Name = "lbl_PluralImperfekt_Indikativ";
-            this.lbl_PluralImperfekt_Indikativ.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralImperfekt_Indikativ.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralImperfekt_Indikativ.TabIndex = 32;
             this.lbl_PluralImperfekt_Indikativ.Text = "Plural";
             // 
             // lbl_SingularImperfekt_Indikativ
             // 
             this.lbl_SingularImperfekt_Indikativ.AutoSize = true;
-            this.lbl_SingularImperfekt_Indikativ.Location = new System.Drawing.Point(296, 208);
+            this.lbl_SingularImperfekt_Indikativ.Location = new System.Drawing.Point(395, 256);
+            this.lbl_SingularImperfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularImperfekt_Indikativ.Name = "lbl_SingularImperfekt_Indikativ";
-            this.lbl_SingularImperfekt_Indikativ.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularImperfekt_Indikativ.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularImperfekt_Indikativ.TabIndex = 31;
             this.lbl_SingularImperfekt_Indikativ.Text = "Singular";
             // 
             // lbl_PluralPlusquamperfekt_Indikativ
             // 
             this.lbl_PluralPlusquamperfekt_Indikativ.AutoSize = true;
-            this.lbl_PluralPlusquamperfekt_Indikativ.Location = new System.Drawing.Point(624, 208);
+            this.lbl_PluralPlusquamperfekt_Indikativ.Location = new System.Drawing.Point(832, 256);
+            this.lbl_PluralPlusquamperfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralPlusquamperfekt_Indikativ.Name = "lbl_PluralPlusquamperfekt_Indikativ";
-            this.lbl_PluralPlusquamperfekt_Indikativ.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralPlusquamperfekt_Indikativ.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralPlusquamperfekt_Indikativ.TabIndex = 34;
             this.lbl_PluralPlusquamperfekt_Indikativ.Text = "Plural";
             // 
             // lbl_SingularPlusquamperfekt_Indikativ
             // 
             this.lbl_SingularPlusquamperfekt_Indikativ.AutoSize = true;
-            this.lbl_SingularPlusquamperfekt_Indikativ.Location = new System.Drawing.Point(520, 208);
+            this.lbl_SingularPlusquamperfekt_Indikativ.Location = new System.Drawing.Point(693, 256);
+            this.lbl_SingularPlusquamperfekt_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularPlusquamperfekt_Indikativ.Name = "lbl_SingularPlusquamperfekt_Indikativ";
-            this.lbl_SingularPlusquamperfekt_Indikativ.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularPlusquamperfekt_Indikativ.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularPlusquamperfekt_Indikativ.TabIndex = 33;
             this.lbl_SingularPlusquamperfekt_Indikativ.Text = "Singular";
             // 
             // lbl_PluralFutur_I_Indikativ
             // 
             this.lbl_PluralFutur_I_Indikativ.AutoSize = true;
-            this.lbl_PluralFutur_I_Indikativ.Location = new System.Drawing.Point(280, 392);
+            this.lbl_PluralFutur_I_Indikativ.Location = new System.Drawing.Point(373, 482);
+            this.lbl_PluralFutur_I_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralFutur_I_Indikativ.Name = "lbl_PluralFutur_I_Indikativ";
-            this.lbl_PluralFutur_I_Indikativ.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralFutur_I_Indikativ.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralFutur_I_Indikativ.TabIndex = 36;
             this.lbl_PluralFutur_I_Indikativ.Text = "Plural";
             // 
             // lbl_SingularFutur_I_Indikativ
             // 
             this.lbl_SingularFutur_I_Indikativ.AutoSize = true;
-            this.lbl_SingularFutur_I_Indikativ.Location = new System.Drawing.Point(168, 392);
+            this.lbl_SingularFutur_I_Indikativ.Location = new System.Drawing.Point(224, 482);
+            this.lbl_SingularFutur_I_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularFutur_I_Indikativ.Name = "lbl_SingularFutur_I_Indikativ";
-            this.lbl_SingularFutur_I_Indikativ.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularFutur_I_Indikativ.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularFutur_I_Indikativ.TabIndex = 35;
             this.lbl_SingularFutur_I_Indikativ.Text = "Singular";
             // 
             // lbl_PluralFutur_II_Indikativ
             // 
             this.lbl_PluralFutur_II_Indikativ.AutoSize = true;
-            this.lbl_PluralFutur_II_Indikativ.Location = new System.Drawing.Point(520, 392);
+            this.lbl_PluralFutur_II_Indikativ.Location = new System.Drawing.Point(693, 482);
+            this.lbl_PluralFutur_II_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralFutur_II_Indikativ.Name = "lbl_PluralFutur_II_Indikativ";
-            this.lbl_PluralFutur_II_Indikativ.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralFutur_II_Indikativ.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralFutur_II_Indikativ.TabIndex = 38;
             this.lbl_PluralFutur_II_Indikativ.Text = "Plural";
             // 
             // lbl_SingularFutur_II_Indikativ
             // 
             this.lbl_SingularFutur_II_Indikativ.AutoSize = true;
-            this.lbl_SingularFutur_II_Indikativ.Location = new System.Drawing.Point(408, 392);
+            this.lbl_SingularFutur_II_Indikativ.Location = new System.Drawing.Point(544, 482);
+            this.lbl_SingularFutur_II_Indikativ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularFutur_II_Indikativ.Name = "lbl_SingularFutur_II_Indikativ";
-            this.lbl_SingularFutur_II_Indikativ.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularFutur_II_Indikativ.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularFutur_II_Indikativ.TabIndex = 37;
             this.lbl_SingularFutur_II_Indikativ.Text = "Singular";
             // 
             // lbl_PluralPlusquamperfekt_Konjunktiv
             // 
             this.lbl_PluralPlusquamperfekt_Konjunktiv.AutoSize = true;
-            this.lbl_PluralPlusquamperfekt_Konjunktiv.Location = new System.Drawing.Point(1360, 208);
+            this.lbl_PluralPlusquamperfekt_Konjunktiv.Location = new System.Drawing.Point(1813, 256);
+            this.lbl_PluralPlusquamperfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralPlusquamperfekt_Konjunktiv.Name = "lbl_PluralPlusquamperfekt_Konjunktiv";
-            this.lbl_PluralPlusquamperfekt_Konjunktiv.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralPlusquamperfekt_Konjunktiv.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralPlusquamperfekt_Konjunktiv.TabIndex = 44;
             this.lbl_PluralPlusquamperfekt_Konjunktiv.Text = "Plural";
             // 
             // lbl_SingularPlusquamperfekt_Konjunktiv
             // 
             this.lbl_SingularPlusquamperfekt_Konjunktiv.AutoSize = true;
-            this.lbl_SingularPlusquamperfekt_Konjunktiv.Location = new System.Drawing.Point(1248, 208);
+            this.lbl_SingularPlusquamperfekt_Konjunktiv.Location = new System.Drawing.Point(1664, 256);
+            this.lbl_SingularPlusquamperfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularPlusquamperfekt_Konjunktiv.Name = "lbl_SingularPlusquamperfekt_Konjunktiv";
-            this.lbl_SingularPlusquamperfekt_Konjunktiv.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularPlusquamperfekt_Konjunktiv.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularPlusquamperfekt_Konjunktiv.TabIndex = 43;
             this.lbl_SingularPlusquamperfekt_Konjunktiv.Text = "Singular";
             // 
             // lbl_PluralImperfekt_Konjunktiv
             // 
             this.lbl_PluralImperfekt_Konjunktiv.AutoSize = true;
-            this.lbl_PluralImperfekt_Konjunktiv.Location = new System.Drawing.Point(1136, 208);
+            this.lbl_PluralImperfekt_Konjunktiv.Location = new System.Drawing.Point(1515, 256);
+            this.lbl_PluralImperfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralImperfekt_Konjunktiv.Name = "lbl_PluralImperfekt_Konjunktiv";
-            this.lbl_PluralImperfekt_Konjunktiv.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralImperfekt_Konjunktiv.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralImperfekt_Konjunktiv.TabIndex = 46;
             this.lbl_PluralImperfekt_Konjunktiv.Text = "Plural";
             // 
             // lbl_SingularImperfekt_Konjunktiv
             // 
             this.lbl_SingularImperfekt_Konjunktiv.AutoSize = true;
-            this.lbl_SingularImperfekt_Konjunktiv.Location = new System.Drawing.Point(1024, 208);
+            this.lbl_SingularImperfekt_Konjunktiv.Location = new System.Drawing.Point(1365, 256);
+            this.lbl_SingularImperfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularImperfekt_Konjunktiv.Name = "lbl_SingularImperfekt_Konjunktiv";
-            this.lbl_SingularImperfekt_Konjunktiv.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularImperfekt_Konjunktiv.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularImperfekt_Konjunktiv.TabIndex = 45;
             this.lbl_SingularImperfekt_Konjunktiv.Text = "Singular";
             // 
             // lbl_PluralPerfekt_Konjunktiv
             // 
             this.lbl_PluralPerfekt_Konjunktiv.AutoSize = true;
-            this.lbl_PluralPerfekt_Konjunktiv.Location = new System.Drawing.Point(912, 208);
+            this.lbl_PluralPerfekt_Konjunktiv.Location = new System.Drawing.Point(1216, 256);
+            this.lbl_PluralPerfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralPerfekt_Konjunktiv.Name = "lbl_PluralPerfekt_Konjunktiv";
-            this.lbl_PluralPerfekt_Konjunktiv.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralPerfekt_Konjunktiv.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralPerfekt_Konjunktiv.TabIndex = 48;
             this.lbl_PluralPerfekt_Konjunktiv.Text = "Plural";
             // 
             // lbl_SingularPerfekt_Konjunktiv
             // 
             this.lbl_SingularPerfekt_Konjunktiv.AutoSize = true;
-            this.lbl_SingularPerfekt_Konjunktiv.Location = new System.Drawing.Point(800, 208);
+            this.lbl_SingularPerfekt_Konjunktiv.Location = new System.Drawing.Point(1067, 256);
+            this.lbl_SingularPerfekt_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularPerfekt_Konjunktiv.Name = "lbl_SingularPerfekt_Konjunktiv";
-            this.lbl_SingularPerfekt_Konjunktiv.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularPerfekt_Konjunktiv.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularPerfekt_Konjunktiv.TabIndex = 47;
             this.lbl_SingularPerfekt_Konjunktiv.Text = "Singular";
             // 
             // lbl_PluralPraesens_Konjunktiv
             // 
             this.lbl_PluralPraesens_Konjunktiv.AutoSize = true;
-            this.lbl_PluralPraesens_Konjunktiv.Location = new System.Drawing.Point(1136, 64);
+            this.lbl_PluralPraesens_Konjunktiv.Location = new System.Drawing.Point(1515, 79);
+            this.lbl_PluralPraesens_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PluralPraesens_Konjunktiv.Name = "lbl_PluralPraesens_Konjunktiv";
-            this.lbl_PluralPraesens_Konjunktiv.Size = new System.Drawing.Size(33, 13);
+            this.lbl_PluralPraesens_Konjunktiv.Size = new System.Drawing.Size(44, 17);
             this.lbl_PluralPraesens_Konjunktiv.TabIndex = 50;
             this.lbl_PluralPraesens_Konjunktiv.Text = "Plural";
             // 
             // lbl_SingularPraesens_Konjunktiv
             // 
             this.lbl_SingularPraesens_Konjunktiv.AutoSize = true;
-            this.lbl_SingularPraesens_Konjunktiv.Location = new System.Drawing.Point(1032, 64);
+            this.lbl_SingularPraesens_Konjunktiv.Location = new System.Drawing.Point(1376, 79);
+            this.lbl_SingularPraesens_Konjunktiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SingularPraesens_Konjunktiv.Name = "lbl_SingularPraesens_Konjunktiv";
-            this.lbl_SingularPraesens_Konjunktiv.Size = new System.Drawing.Size(45, 13);
+            this.lbl_SingularPraesens_Konjunktiv.Size = new System.Drawing.Size(60, 17);
             this.lbl_SingularPraesens_Konjunktiv.TabIndex = 49;
             this.lbl_SingularPraesens_Konjunktiv.Text = "Singular";
             // 
             // txtBox_ErstePersonSingularPraesensIndikativ
             // 
-            this.txtBox_ErstePersonSingularPraesensIndikativ.Location = new System.Drawing.Point(272, 64);
+            this.txtBox_ErstePersonSingularPraesensIndikativ.Location = new System.Drawing.Point(363, 79);
+            this.txtBox_ErstePersonSingularPraesensIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularPraesensIndikativ.Name = "txtBox_ErstePersonSingularPraesensIndikativ";
-            this.txtBox_ErstePersonSingularPraesensIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularPraesensIndikativ.TabIndex = 51;
+            this.txtBox_ErstePersonSingularPraesensIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularPraesensIndikativ.TabIndex = 2;
             // 
             // txtBox_ErstePersonPluralPraesensIndikativ
             // 
-            this.txtBox_ErstePersonPluralPraesensIndikativ.Location = new System.Drawing.Point(376, 64);
+            this.txtBox_ErstePersonPluralPraesensIndikativ.Location = new System.Drawing.Point(501, 79);
+            this.txtBox_ErstePersonPluralPraesensIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralPraesensIndikativ.Name = "txtBox_ErstePersonPluralPraesensIndikativ";
-            this.txtBox_ErstePersonPluralPraesensIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralPraesensIndikativ.TabIndex = 52;
+            this.txtBox_ErstePersonPluralPraesensIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralPraesensIndikativ.TabIndex = 5;
             // 
             // txtBox_ZweitePersonSingularPraesensIndikativ
             // 
-            this.txtBox_ZweitePersonSingularPraesensIndikativ.Location = new System.Drawing.Point(272, 88);
+            this.txtBox_ZweitePersonSingularPraesensIndikativ.Location = new System.Drawing.Point(363, 108);
+            this.txtBox_ZweitePersonSingularPraesensIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularPraesensIndikativ.Name = "txtBox_ZweitePersonSingularPraesensIndikativ";
-            this.txtBox_ZweitePersonSingularPraesensIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularPraesensIndikativ.TabIndex = 53;
+            this.txtBox_ZweitePersonSingularPraesensIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularPraesensIndikativ.TabIndex = 3;
             // 
             // txtBox_ZweitePersonPluralPraesensIndikativ
             // 
-            this.txtBox_ZweitePersonPluralPraesensIndikativ.Location = new System.Drawing.Point(376, 88);
+            this.txtBox_ZweitePersonPluralPraesensIndikativ.Location = new System.Drawing.Point(501, 108);
+            this.txtBox_ZweitePersonPluralPraesensIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralPraesensIndikativ.Name = "txtBox_ZweitePersonPluralPraesensIndikativ";
-            this.txtBox_ZweitePersonPluralPraesensIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralPraesensIndikativ.TabIndex = 54;
+            this.txtBox_ZweitePersonPluralPraesensIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralPraesensIndikativ.TabIndex = 6;
             // 
             // txtBox_DrittePersonSingularPraesensIndikativ
             // 
-            this.txtBox_DrittePersonSingularPraesensIndikativ.Location = new System.Drawing.Point(272, 112);
+            this.txtBox_DrittePersonSingularPraesensIndikativ.Location = new System.Drawing.Point(363, 138);
+            this.txtBox_DrittePersonSingularPraesensIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularPraesensIndikativ.Name = "txtBox_DrittePersonSingularPraesensIndikativ";
-            this.txtBox_DrittePersonSingularPraesensIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularPraesensIndikativ.TabIndex = 55;
+            this.txtBox_DrittePersonSingularPraesensIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularPraesensIndikativ.TabIndex = 4;
             // 
             // txtBox_DrittePersonPluralPraesensIndikativ
             // 
-            this.txtBox_DrittePersonPluralPraesensIndikativ.Location = new System.Drawing.Point(376, 112);
+            this.txtBox_DrittePersonPluralPraesensIndikativ.Location = new System.Drawing.Point(501, 138);
+            this.txtBox_DrittePersonPluralPraesensIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralPraesensIndikativ.Name = "txtBox_DrittePersonPluralPraesensIndikativ";
-            this.txtBox_DrittePersonPluralPraesensIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralPraesensIndikativ.TabIndex = 56;
+            this.txtBox_DrittePersonPluralPraesensIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralPraesensIndikativ.TabIndex = 7;
             // 
             // txtBox_DrittePersonPluralPraesensKonjunktiv
             // 
-            this.txtBox_DrittePersonPluralPraesensKonjunktiv.Location = new System.Drawing.Point(1112, 128);
+            this.txtBox_DrittePersonPluralPraesensKonjunktiv.Location = new System.Drawing.Point(1483, 158);
+            this.txtBox_DrittePersonPluralPraesensKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralPraesensKonjunktiv.Name = "txtBox_DrittePersonPluralPraesensKonjunktiv";
-            this.txtBox_DrittePersonPluralPraesensKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralPraesensKonjunktiv.TabIndex = 62;
+            this.txtBox_DrittePersonPluralPraesensKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralPraesensKonjunktiv.TabIndex = 43;
             // 
             // txtBox_DrittePersonSingularPraesensKonjunktiv
             // 
-            this.txtBox_DrittePersonSingularPraesensKonjunktiv.Location = new System.Drawing.Point(1008, 128);
+            this.txtBox_DrittePersonSingularPraesensKonjunktiv.Location = new System.Drawing.Point(1344, 158);
+            this.txtBox_DrittePersonSingularPraesensKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularPraesensKonjunktiv.Name = "txtBox_DrittePersonSingularPraesensKonjunktiv";
-            this.txtBox_DrittePersonSingularPraesensKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularPraesensKonjunktiv.TabIndex = 61;
+            this.txtBox_DrittePersonSingularPraesensKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularPraesensKonjunktiv.TabIndex = 40;
             // 
             // txtBox_ZweitePersonPluralPraesensKonjunktiv
             // 
-            this.txtBox_ZweitePersonPluralPraesensKonjunktiv.Location = new System.Drawing.Point(1112, 104);
+            this.txtBox_ZweitePersonPluralPraesensKonjunktiv.Location = new System.Drawing.Point(1483, 128);
+            this.txtBox_ZweitePersonPluralPraesensKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralPraesensKonjunktiv.Name = "txtBox_ZweitePersonPluralPraesensKonjunktiv";
-            this.txtBox_ZweitePersonPluralPraesensKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralPraesensKonjunktiv.TabIndex = 60;
+            this.txtBox_ZweitePersonPluralPraesensKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralPraesensKonjunktiv.TabIndex = 42;
             // 
             // txtBox_ZweitePersonSingularPraesensKonjunktiv
             // 
-            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.Location = new System.Drawing.Point(1008, 104);
+            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.Location = new System.Drawing.Point(1344, 128);
+            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularPraesensKonjunktiv.Name = "txtBox_ZweitePersonSingularPraesensKonjunktiv";
-            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.TabIndex = 59;
+            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.TabIndex = 39;
             // 
             // txtBox_ErstePersonPluralPraesensKonjunktiv
             // 
-            this.txtBox_ErstePersonPluralPraesensKonjunktiv.Location = new System.Drawing.Point(1112, 80);
+            this.txtBox_ErstePersonPluralPraesensKonjunktiv.Location = new System.Drawing.Point(1483, 98);
+            this.txtBox_ErstePersonPluralPraesensKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralPraesensKonjunktiv.Name = "txtBox_ErstePersonPluralPraesensKonjunktiv";
-            this.txtBox_ErstePersonPluralPraesensKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralPraesensKonjunktiv.TabIndex = 58;
+            this.txtBox_ErstePersonPluralPraesensKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralPraesensKonjunktiv.TabIndex = 41;
             // 
             // txtBox_ErstePersonSingularPraesensKonjunktiv
             // 
-            this.txtBox_ErstePersonSingularPraesensKonjunktiv.Location = new System.Drawing.Point(1008, 80);
+            this.txtBox_ErstePersonSingularPraesensKonjunktiv.Location = new System.Drawing.Point(1344, 98);
+            this.txtBox_ErstePersonSingularPraesensKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularPraesensKonjunktiv.Name = "txtBox_ErstePersonSingularPraesensKonjunktiv";
-            this.txtBox_ErstePersonSingularPraesensKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularPraesensKonjunktiv.TabIndex = 57;
+            this.txtBox_ErstePersonSingularPraesensKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularPraesensKonjunktiv.TabIndex = 38;
             // 
             // txtBox_DrittePersonPluralPerfektIndikativ
             // 
-            this.txtBox_DrittePersonPluralPerfektIndikativ.Location = new System.Drawing.Point(152, 272);
+            this.txtBox_DrittePersonPluralPerfektIndikativ.Location = new System.Drawing.Point(203, 335);
+            this.txtBox_DrittePersonPluralPerfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralPerfektIndikativ.Name = "txtBox_DrittePersonPluralPerfektIndikativ";
-            this.txtBox_DrittePersonPluralPerfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralPerfektIndikativ.TabIndex = 68;
+            this.txtBox_DrittePersonPluralPerfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralPerfektIndikativ.TabIndex = 13;
             // 
             // txtBox_DrittePersonSingularPerfektIndikativ
             // 
-            this.txtBox_DrittePersonSingularPerfektIndikativ.Location = new System.Drawing.Point(48, 272);
+            this.txtBox_DrittePersonSingularPerfektIndikativ.Location = new System.Drawing.Point(64, 335);
+            this.txtBox_DrittePersonSingularPerfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularPerfektIndikativ.Name = "txtBox_DrittePersonSingularPerfektIndikativ";
-            this.txtBox_DrittePersonSingularPerfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularPerfektIndikativ.TabIndex = 67;
+            this.txtBox_DrittePersonSingularPerfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularPerfektIndikativ.TabIndex = 10;
             // 
             // txtBox_ZweitePersonPluralPerfektIndikativ
             // 
-            this.txtBox_ZweitePersonPluralPerfektIndikativ.Location = new System.Drawing.Point(152, 248);
+            this.txtBox_ZweitePersonPluralPerfektIndikativ.Location = new System.Drawing.Point(203, 305);
+            this.txtBox_ZweitePersonPluralPerfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralPerfektIndikativ.Name = "txtBox_ZweitePersonPluralPerfektIndikativ";
-            this.txtBox_ZweitePersonPluralPerfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralPerfektIndikativ.TabIndex = 66;
+            this.txtBox_ZweitePersonPluralPerfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralPerfektIndikativ.TabIndex = 12;
             // 
             // txtBox_ZweitePersonSingularPerfektIndikativ
             // 
-            this.txtBox_ZweitePersonSingularPerfektIndikativ.Location = new System.Drawing.Point(48, 248);
+            this.txtBox_ZweitePersonSingularPerfektIndikativ.Location = new System.Drawing.Point(64, 305);
+            this.txtBox_ZweitePersonSingularPerfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularPerfektIndikativ.Name = "txtBox_ZweitePersonSingularPerfektIndikativ";
-            this.txtBox_ZweitePersonSingularPerfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularPerfektIndikativ.TabIndex = 65;
+            this.txtBox_ZweitePersonSingularPerfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularPerfektIndikativ.TabIndex = 9;
             // 
             // txtBox_ErstePersonPluralPerfektIndikativ
             // 
-            this.txtBox_ErstePersonPluralPerfektIndikativ.Location = new System.Drawing.Point(152, 224);
+            this.txtBox_ErstePersonPluralPerfektIndikativ.Location = new System.Drawing.Point(203, 276);
+            this.txtBox_ErstePersonPluralPerfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralPerfektIndikativ.Name = "txtBox_ErstePersonPluralPerfektIndikativ";
-            this.txtBox_ErstePersonPluralPerfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralPerfektIndikativ.TabIndex = 64;
+            this.txtBox_ErstePersonPluralPerfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralPerfektIndikativ.TabIndex = 11;
             // 
             // txtBox_ErstePersonSingularPerfektIndikativ
             // 
-            this.txtBox_ErstePersonSingularPerfektIndikativ.Location = new System.Drawing.Point(48, 224);
+            this.txtBox_ErstePersonSingularPerfektIndikativ.Location = new System.Drawing.Point(64, 276);
+            this.txtBox_ErstePersonSingularPerfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularPerfektIndikativ.Name = "txtBox_ErstePersonSingularPerfektIndikativ";
-            this.txtBox_ErstePersonSingularPerfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularPerfektIndikativ.TabIndex = 63;
+            this.txtBox_ErstePersonSingularPerfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularPerfektIndikativ.TabIndex = 8;
             // 
             // txtBox_DrittePersonPluralImperfektIndikativ
             // 
-            this.txtBox_DrittePersonPluralImperfektIndikativ.Location = new System.Drawing.Point(376, 272);
+            this.txtBox_DrittePersonPluralImperfektIndikativ.Location = new System.Drawing.Point(501, 335);
+            this.txtBox_DrittePersonPluralImperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralImperfektIndikativ.Name = "txtBox_DrittePersonPluralImperfektIndikativ";
-            this.txtBox_DrittePersonPluralImperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralImperfektIndikativ.TabIndex = 74;
+            this.txtBox_DrittePersonPluralImperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralImperfektIndikativ.TabIndex = 19;
             // 
             // txtBox_DrittePersonSingularImperfektIndikativ
             // 
-            this.txtBox_DrittePersonSingularImperfektIndikativ.Location = new System.Drawing.Point(272, 272);
+            this.txtBox_DrittePersonSingularImperfektIndikativ.Location = new System.Drawing.Point(363, 335);
+            this.txtBox_DrittePersonSingularImperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularImperfektIndikativ.Name = "txtBox_DrittePersonSingularImperfektIndikativ";
-            this.txtBox_DrittePersonSingularImperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularImperfektIndikativ.TabIndex = 73;
+            this.txtBox_DrittePersonSingularImperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularImperfektIndikativ.TabIndex = 16;
             // 
             // txtBox_ZweitePersonPluralImperfektIndikativ
             // 
-            this.txtBox_ZweitePersonPluralImperfektIndikativ.Location = new System.Drawing.Point(376, 248);
+            this.txtBox_ZweitePersonPluralImperfektIndikativ.Location = new System.Drawing.Point(501, 305);
+            this.txtBox_ZweitePersonPluralImperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralImperfektIndikativ.Name = "txtBox_ZweitePersonPluralImperfektIndikativ";
-            this.txtBox_ZweitePersonPluralImperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralImperfektIndikativ.TabIndex = 72;
+            this.txtBox_ZweitePersonPluralImperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralImperfektIndikativ.TabIndex = 18;
             // 
             // txtBox_ZweitePersonSingularImperfektIndikativ
             // 
-            this.txtBox_ZweitePersonSingularImperfektIndikativ.Location = new System.Drawing.Point(272, 248);
+            this.txtBox_ZweitePersonSingularImperfektIndikativ.Location = new System.Drawing.Point(363, 305);
+            this.txtBox_ZweitePersonSingularImperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularImperfektIndikativ.Name = "txtBox_ZweitePersonSingularImperfektIndikativ";
-            this.txtBox_ZweitePersonSingularImperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularImperfektIndikativ.TabIndex = 71;
+            this.txtBox_ZweitePersonSingularImperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularImperfektIndikativ.TabIndex = 15;
             // 
             // txtBox_ErstePersonPluralImperfektIndikativ
             // 
-            this.txtBox_ErstePersonPluralImperfektIndikativ.Location = new System.Drawing.Point(376, 224);
+            this.txtBox_ErstePersonPluralImperfektIndikativ.Location = new System.Drawing.Point(501, 276);
+            this.txtBox_ErstePersonPluralImperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralImperfektIndikativ.Name = "txtBox_ErstePersonPluralImperfektIndikativ";
-            this.txtBox_ErstePersonPluralImperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralImperfektIndikativ.TabIndex = 70;
+            this.txtBox_ErstePersonPluralImperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralImperfektIndikativ.TabIndex = 17;
             // 
             // txtBox_ErstePersonSingularImperfektIndikativ
             // 
-            this.txtBox_ErstePersonSingularImperfektIndikativ.Location = new System.Drawing.Point(272, 224);
+            this.txtBox_ErstePersonSingularImperfektIndikativ.Location = new System.Drawing.Point(363, 276);
+            this.txtBox_ErstePersonSingularImperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularImperfektIndikativ.Name = "txtBox_ErstePersonSingularImperfektIndikativ";
-            this.txtBox_ErstePersonSingularImperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularImperfektIndikativ.TabIndex = 69;
+            this.txtBox_ErstePersonSingularImperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularImperfektIndikativ.TabIndex = 14;
             // 
             // txtBox_DrittePersonPluralPlusquamperfektIndikativ
             // 
-            this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Location = new System.Drawing.Point(600, 272);
+            this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Location = new System.Drawing.Point(800, 335);
+            this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Name = "txtBox_DrittePersonPluralPlusquamperfektIndikativ";
-            this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.TabIndex = 80;
+            this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.TabIndex = 25;
             // 
             // txtBox_DrittePersonSingularPlusquamperfektIndikativ
             // 
-            this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.Location = new System.Drawing.Point(496, 272);
+            this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.Location = new System.Drawing.Point(661, 335);
+            this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.Name = "txtBox_DrittePersonSingularPlusquamperfektIndikativ";
-            this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.TabIndex = 79;
+            this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.TabIndex = 22;
             // 
             // txtBox_ZweitePersonPluralPlusquamperfektIndikativ
             // 
-            this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.Location = new System.Drawing.Point(600, 248);
+            this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.Location = new System.Drawing.Point(800, 305);
+            this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.Name = "txtBox_ZweitePersonPluralPlusquamperfektIndikativ";
-            this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.TabIndex = 78;
+            this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.TabIndex = 24;
             // 
             // txtBox_ZweitePersonSingularPlusquamperfektIndikativ
             // 
-            this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.Location = new System.Drawing.Point(496, 248);
+            this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.Location = new System.Drawing.Point(661, 305);
+            this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.Name = "txtBox_ZweitePersonSingularPlusquamperfektIndikativ";
-            this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.TabIndex = 77;
+            this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.TabIndex = 21;
             // 
             // txtBox_ErstePersonPluralPlusquamperfektIndikativ
             // 
-            this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.Location = new System.Drawing.Point(600, 224);
+            this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.Location = new System.Drawing.Point(800, 276);
+            this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.Name = "txtBox_ErstePersonPluralPlusquamperfektIndikativ";
-            this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.TabIndex = 76;
+            this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.TabIndex = 23;
             // 
             // txtBox_ErstePersonSingularPlusquamperfektIndikativ
             // 
-            this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.Location = new System.Drawing.Point(496, 224);
+            this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.Location = new System.Drawing.Point(661, 276);
+            this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.Name = "txtBox_ErstePersonSingularPlusquamperfektIndikativ";
-            this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.TabIndex = 75;
+            this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.TabIndex = 20;
             // 
             // txtBox_DrittePersonPluralFutur_IIndikativ
             // 
-            this.txtBox_DrittePersonPluralFutur_IIndikativ.Location = new System.Drawing.Point(248, 456);
+            this.txtBox_DrittePersonPluralFutur_IIndikativ.Location = new System.Drawing.Point(331, 561);
+            this.txtBox_DrittePersonPluralFutur_IIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralFutur_IIndikativ.Name = "txtBox_DrittePersonPluralFutur_IIndikativ";
-            this.txtBox_DrittePersonPluralFutur_IIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralFutur_IIndikativ.TabIndex = 86;
+            this.txtBox_DrittePersonPluralFutur_IIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralFutur_IIndikativ.TabIndex = 31;
             // 
             // txtBox_DrittePersonSingularFutur_IIndikativ
             // 
-            this.txtBox_DrittePersonSingularFutur_IIndikativ.Location = new System.Drawing.Point(144, 456);
+            this.txtBox_DrittePersonSingularFutur_IIndikativ.Location = new System.Drawing.Point(192, 561);
+            this.txtBox_DrittePersonSingularFutur_IIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularFutur_IIndikativ.Name = "txtBox_DrittePersonSingularFutur_IIndikativ";
-            this.txtBox_DrittePersonSingularFutur_IIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularFutur_IIndikativ.TabIndex = 85;
+            this.txtBox_DrittePersonSingularFutur_IIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularFutur_IIndikativ.TabIndex = 28;
             // 
             // txtBox_ZweitePersonPluralFutur_IIndikativ
             // 
-            this.txtBox_ZweitePersonPluralFutur_IIndikativ.Location = new System.Drawing.Point(248, 432);
+            this.txtBox_ZweitePersonPluralFutur_IIndikativ.Location = new System.Drawing.Point(331, 532);
+            this.txtBox_ZweitePersonPluralFutur_IIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralFutur_IIndikativ.Name = "txtBox_ZweitePersonPluralFutur_IIndikativ";
-            this.txtBox_ZweitePersonPluralFutur_IIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralFutur_IIndikativ.TabIndex = 84;
+            this.txtBox_ZweitePersonPluralFutur_IIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralFutur_IIndikativ.TabIndex = 30;
             // 
             // txtBox_ZweitePersonSingularFutur_IIndikativ
             // 
-            this.txtBox_ZweitePersonSingularFutur_IIndikativ.Location = new System.Drawing.Point(144, 432);
+            this.txtBox_ZweitePersonSingularFutur_IIndikativ.Location = new System.Drawing.Point(192, 532);
+            this.txtBox_ZweitePersonSingularFutur_IIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularFutur_IIndikativ.Name = "txtBox_ZweitePersonSingularFutur_IIndikativ";
-            this.txtBox_ZweitePersonSingularFutur_IIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularFutur_IIndikativ.TabIndex = 83;
+            this.txtBox_ZweitePersonSingularFutur_IIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularFutur_IIndikativ.TabIndex = 27;
             // 
             // txtBox_ErstePersonPluralFutur_IIndikativ
             // 
-            this.txtBox_ErstePersonPluralFutur_IIndikativ.Location = new System.Drawing.Point(248, 408);
+            this.txtBox_ErstePersonPluralFutur_IIndikativ.Location = new System.Drawing.Point(331, 502);
+            this.txtBox_ErstePersonPluralFutur_IIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralFutur_IIndikativ.Name = "txtBox_ErstePersonPluralFutur_IIndikativ";
-            this.txtBox_ErstePersonPluralFutur_IIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralFutur_IIndikativ.TabIndex = 82;
+            this.txtBox_ErstePersonPluralFutur_IIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralFutur_IIndikativ.TabIndex = 29;
             // 
-            // txtBox_ErstePersonSingularFutur_IImperfekt
+            // txtBox_ErstePersonSingularFutur_IIndikativ
             // 
-            this.txtBox_ErstePersonSingularFutur_IImperfekt.Location = new System.Drawing.Point(144, 408);
-            this.txtBox_ErstePersonSingularFutur_IImperfekt.Name = "txtBox_ErstePersonSingularFutur_IImperfekt";
-            this.txtBox_ErstePersonSingularFutur_IImperfekt.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularFutur_IImperfekt.TabIndex = 81;
+            this.txtBox_ErstePersonSingularFutur_IIndikativ.Location = new System.Drawing.Point(192, 502);
+            this.txtBox_ErstePersonSingularFutur_IIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBox_ErstePersonSingularFutur_IIndikativ.Name = "txtBox_ErstePersonSingularFutur_IIndikativ";
+            this.txtBox_ErstePersonSingularFutur_IIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularFutur_IIndikativ.TabIndex = 26;
             // 
             // txtBox_DrittePersonPluralFutur_IIIndikativ
             // 
-            this.txtBox_DrittePersonPluralFutur_IIIndikativ.Location = new System.Drawing.Point(488, 456);
+            this.txtBox_DrittePersonPluralFutur_IIIndikativ.Location = new System.Drawing.Point(651, 561);
+            this.txtBox_DrittePersonPluralFutur_IIIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralFutur_IIIndikativ.Name = "txtBox_DrittePersonPluralFutur_IIIndikativ";
-            this.txtBox_DrittePersonPluralFutur_IIIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralFutur_IIIndikativ.TabIndex = 92;
+            this.txtBox_DrittePersonPluralFutur_IIIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralFutur_IIIndikativ.TabIndex = 37;
             // 
             // txtBox_DrittePersonSingularFutur_IIIndikativ
             // 
-            this.txtBox_DrittePersonSingularFutur_IIIndikativ.Location = new System.Drawing.Point(384, 456);
+            this.txtBox_DrittePersonSingularFutur_IIIndikativ.Location = new System.Drawing.Point(512, 561);
+            this.txtBox_DrittePersonSingularFutur_IIIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularFutur_IIIndikativ.Name = "txtBox_DrittePersonSingularFutur_IIIndikativ";
-            this.txtBox_DrittePersonSingularFutur_IIIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularFutur_IIIndikativ.TabIndex = 91;
+            this.txtBox_DrittePersonSingularFutur_IIIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularFutur_IIIndikativ.TabIndex = 34;
             // 
             // txtBox_ZweitePersonPluralFutur_IIIndikativ
             // 
-            this.txtBox_ZweitePersonPluralFutur_IIIndikativ.Location = new System.Drawing.Point(488, 432);
+            this.txtBox_ZweitePersonPluralFutur_IIIndikativ.Location = new System.Drawing.Point(651, 532);
+            this.txtBox_ZweitePersonPluralFutur_IIIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralFutur_IIIndikativ.Name = "txtBox_ZweitePersonPluralFutur_IIIndikativ";
-            this.txtBox_ZweitePersonPluralFutur_IIIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralFutur_IIIndikativ.TabIndex = 90;
+            this.txtBox_ZweitePersonPluralFutur_IIIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralFutur_IIIndikativ.TabIndex = 36;
             // 
             // txtBox_ZweitePersonSingularFutur_IIIndikativ
             // 
-            this.txtBox_ZweitePersonSingularFutur_IIIndikativ.Location = new System.Drawing.Point(384, 432);
+            this.txtBox_ZweitePersonSingularFutur_IIIndikativ.Location = new System.Drawing.Point(512, 532);
+            this.txtBox_ZweitePersonSingularFutur_IIIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularFutur_IIIndikativ.Name = "txtBox_ZweitePersonSingularFutur_IIIndikativ";
-            this.txtBox_ZweitePersonSingularFutur_IIIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularFutur_IIIndikativ.TabIndex = 89;
+            this.txtBox_ZweitePersonSingularFutur_IIIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularFutur_IIIndikativ.TabIndex = 33;
             // 
             // txtBox_ErstePersonPluralFutur_IIIndikativ
             // 
-            this.txtBox_ErstePersonPluralFutur_IIIndikativ.Location = new System.Drawing.Point(488, 408);
+            this.txtBox_ErstePersonPluralFutur_IIIndikativ.Location = new System.Drawing.Point(651, 502);
+            this.txtBox_ErstePersonPluralFutur_IIIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralFutur_IIIndikativ.Name = "txtBox_ErstePersonPluralFutur_IIIndikativ";
-            this.txtBox_ErstePersonPluralFutur_IIIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralFutur_IIIndikativ.TabIndex = 88;
+            this.txtBox_ErstePersonPluralFutur_IIIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralFutur_IIIndikativ.TabIndex = 35;
             // 
             // txtBox_ErstePersonSingularFutur_IIIndikativ
             // 
-            this.txtBox_ErstePersonSingularFutur_IIIndikativ.Location = new System.Drawing.Point(384, 408);
+            this.txtBox_ErstePersonSingularFutur_IIIndikativ.Location = new System.Drawing.Point(512, 502);
+            this.txtBox_ErstePersonSingularFutur_IIIndikativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularFutur_IIIndikativ.Name = "txtBox_ErstePersonSingularFutur_IIIndikativ";
-            this.txtBox_ErstePersonSingularFutur_IIIndikativ.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularFutur_IIIndikativ.TabIndex = 87;
+            this.txtBox_ErstePersonSingularFutur_IIIndikativ.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularFutur_IIIndikativ.TabIndex = 32;
             // 
             // txtBox_DrittePersonPluralPlusquamperfektKonjunktiv
             // 
-            this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1328, 272);
+            this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1771, 335);
+            this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Name = "txtBox_DrittePersonPluralPlusquamperfektKonjunktiv";
-            this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.TabIndex = 110;
+            this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.TabIndex = 61;
             // 
             // txtBox_DrittePersonSingularPlusquamperfektKonjunktiv
             // 
-            this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1224, 272);
+            this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1632, 335);
+            this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.Name = "txtBox_DrittePersonSingularPlusquamperfektKonjunktiv";
-            this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.TabIndex = 109;
+            this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.TabIndex = 58;
             // 
             // txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv
             // 
-            this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1328, 248);
+            this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1771, 305);
+            this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.Name = "txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv";
-            this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.TabIndex = 108;
+            this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.TabIndex = 60;
             // 
             // txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv
             // 
-            this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1224, 248);
+            this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1632, 305);
+            this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.Name = "txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv";
-            this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.TabIndex = 107;
+            this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.TabIndex = 57;
             // 
             // txtBox_ErstePersonPluralPlusquamperfektKonjunktiv
             // 
-            this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1328, 224);
+            this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1771, 276);
+            this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.Name = "txtBox_ErstePersonPluralPlusquamperfektKonjunktiv";
-            this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.TabIndex = 106;
+            this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.TabIndex = 59;
             // 
             // txtBox_ErstePersonSingularPlusquamperfektKonjunktiv
             // 
-            this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1224, 224);
+            this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.Location = new System.Drawing.Point(1632, 276);
+            this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.Name = "txtBox_ErstePersonSingularPlusquamperfektKonjunktiv";
-            this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.TabIndex = 105;
+            this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.TabIndex = 56;
             // 
             // txtBox_DrittePersonPluralImperfektKonjunktiv
             // 
-            this.txtBox_DrittePersonPluralImperfektKonjunktiv.Location = new System.Drawing.Point(1104, 272);
+            this.txtBox_DrittePersonPluralImperfektKonjunktiv.Location = new System.Drawing.Point(1472, 335);
+            this.txtBox_DrittePersonPluralImperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralImperfektKonjunktiv.Name = "txtBox_DrittePersonPluralImperfektKonjunktiv";
-            this.txtBox_DrittePersonPluralImperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralImperfektKonjunktiv.TabIndex = 104;
+            this.txtBox_DrittePersonPluralImperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralImperfektKonjunktiv.TabIndex = 55;
             // 
             // txtBox_DrittePersonSingularImperfektKonjunktiv
             // 
-            this.txtBox_DrittePersonSingularImperfektKonjunktiv.Location = new System.Drawing.Point(1000, 272);
+            this.txtBox_DrittePersonSingularImperfektKonjunktiv.Location = new System.Drawing.Point(1333, 335);
+            this.txtBox_DrittePersonSingularImperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularImperfektKonjunktiv.Name = "txtBox_DrittePersonSingularImperfektKonjunktiv";
-            this.txtBox_DrittePersonSingularImperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularImperfektKonjunktiv.TabIndex = 103;
+            this.txtBox_DrittePersonSingularImperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularImperfektKonjunktiv.TabIndex = 52;
             // 
             // txtBox_ZweitePersonPluralImperfektKonjunktiv
             // 
-            this.txtBox_ZweitePersonPluralImperfektKonjunktiv.Location = new System.Drawing.Point(1104, 248);
+            this.txtBox_ZweitePersonPluralImperfektKonjunktiv.Location = new System.Drawing.Point(1472, 305);
+            this.txtBox_ZweitePersonPluralImperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralImperfektKonjunktiv.Name = "txtBox_ZweitePersonPluralImperfektKonjunktiv";
-            this.txtBox_ZweitePersonPluralImperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralImperfektKonjunktiv.TabIndex = 102;
+            this.txtBox_ZweitePersonPluralImperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralImperfektKonjunktiv.TabIndex = 54;
             // 
             // txtBox_ZweitePersonSingularImperfektKonjunktiv
             // 
-            this.txtBox_ZweitePersonSingularImperfektKonjunktiv.Location = new System.Drawing.Point(1000, 248);
+            this.txtBox_ZweitePersonSingularImperfektKonjunktiv.Location = new System.Drawing.Point(1333, 305);
+            this.txtBox_ZweitePersonSingularImperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularImperfektKonjunktiv.Name = "txtBox_ZweitePersonSingularImperfektKonjunktiv";
-            this.txtBox_ZweitePersonSingularImperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularImperfektKonjunktiv.TabIndex = 101;
+            this.txtBox_ZweitePersonSingularImperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularImperfektKonjunktiv.TabIndex = 51;
             // 
             // txtBox_ErstePersonPluralImperfektKonjunktiv
             // 
-            this.txtBox_ErstePersonPluralImperfektKonjunktiv.Location = new System.Drawing.Point(1104, 224);
+            this.txtBox_ErstePersonPluralImperfektKonjunktiv.Location = new System.Drawing.Point(1472, 276);
+            this.txtBox_ErstePersonPluralImperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralImperfektKonjunktiv.Name = "txtBox_ErstePersonPluralImperfektKonjunktiv";
-            this.txtBox_ErstePersonPluralImperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralImperfektKonjunktiv.TabIndex = 100;
+            this.txtBox_ErstePersonPluralImperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralImperfektKonjunktiv.TabIndex = 53;
             // 
             // txtBox_ErstePersonSingularImperfektKonjunktiv
             // 
-            this.txtBox_ErstePersonSingularImperfektKonjunktiv.Location = new System.Drawing.Point(1000, 224);
+            this.txtBox_ErstePersonSingularImperfektKonjunktiv.Location = new System.Drawing.Point(1333, 276);
+            this.txtBox_ErstePersonSingularImperfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularImperfektKonjunktiv.Name = "txtBox_ErstePersonSingularImperfektKonjunktiv";
-            this.txtBox_ErstePersonSingularImperfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularImperfektKonjunktiv.TabIndex = 99;
+            this.txtBox_ErstePersonSingularImperfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularImperfektKonjunktiv.TabIndex = 50;
             // 
             // txtBox_DrittePersonPluralPerfektKonjunktiv
             // 
-            this.txtBox_DrittePersonPluralPerfektKonjunktiv.Location = new System.Drawing.Point(880, 272);
+            this.txtBox_DrittePersonPluralPerfektKonjunktiv.Location = new System.Drawing.Point(1173, 335);
+            this.txtBox_DrittePersonPluralPerfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonPluralPerfektKonjunktiv.Name = "txtBox_DrittePersonPluralPerfektKonjunktiv";
-            this.txtBox_DrittePersonPluralPerfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonPluralPerfektKonjunktiv.TabIndex = 98;
+            this.txtBox_DrittePersonPluralPerfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonPluralPerfektKonjunktiv.TabIndex = 49;
             // 
             // txtBox_DrittePersonSingularPerfektKonjunktiv
             // 
-            this.txtBox_DrittePersonSingularPerfektKonjunktiv.Location = new System.Drawing.Point(776, 272);
+            this.txtBox_DrittePersonSingularPerfektKonjunktiv.Location = new System.Drawing.Point(1035, 335);
+            this.txtBox_DrittePersonSingularPerfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DrittePersonSingularPerfektKonjunktiv.Name = "txtBox_DrittePersonSingularPerfektKonjunktiv";
-            this.txtBox_DrittePersonSingularPerfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_DrittePersonSingularPerfektKonjunktiv.TabIndex = 97;
+            this.txtBox_DrittePersonSingularPerfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_DrittePersonSingularPerfektKonjunktiv.TabIndex = 46;
             // 
             // txtBox_ZweitePersonPluralPerfektKonjunktiv
             // 
-            this.txtBox_ZweitePersonPluralPerfektKonjunktiv.Location = new System.Drawing.Point(880, 248);
+            this.txtBox_ZweitePersonPluralPerfektKonjunktiv.Location = new System.Drawing.Point(1173, 305);
+            this.txtBox_ZweitePersonPluralPerfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonPluralPerfektKonjunktiv.Name = "txtBox_ZweitePersonPluralPerfektKonjunktiv";
-            this.txtBox_ZweitePersonPluralPerfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonPluralPerfektKonjunktiv.TabIndex = 96;
+            this.txtBox_ZweitePersonPluralPerfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonPluralPerfektKonjunktiv.TabIndex = 48;
             // 
             // txtBox_ZweitePersonSingularPerfektKonjunktiv
             // 
-            this.txtBox_ZweitePersonSingularPerfektKonjunktiv.Location = new System.Drawing.Point(776, 248);
+            this.txtBox_ZweitePersonSingularPerfektKonjunktiv.Location = new System.Drawing.Point(1035, 305);
+            this.txtBox_ZweitePersonSingularPerfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ZweitePersonSingularPerfektKonjunktiv.Name = "txtBox_ZweitePersonSingularPerfektKonjunktiv";
-            this.txtBox_ZweitePersonSingularPerfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ZweitePersonSingularPerfektKonjunktiv.TabIndex = 95;
+            this.txtBox_ZweitePersonSingularPerfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZweitePersonSingularPerfektKonjunktiv.TabIndex = 45;
             // 
             // txtBox_ErstePersonPluralPerfektKonjunktiv
             // 
-            this.txtBox_ErstePersonPluralPerfektKonjunktiv.Location = new System.Drawing.Point(880, 224);
+            this.txtBox_ErstePersonPluralPerfektKonjunktiv.Location = new System.Drawing.Point(1173, 276);
+            this.txtBox_ErstePersonPluralPerfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonPluralPerfektKonjunktiv.Name = "txtBox_ErstePersonPluralPerfektKonjunktiv";
-            this.txtBox_ErstePersonPluralPerfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonPluralPerfektKonjunktiv.TabIndex = 94;
+            this.txtBox_ErstePersonPluralPerfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonPluralPerfektKonjunktiv.TabIndex = 47;
             // 
             // txtBox_ErstePersonSingularPerfektKonjunktiv
             // 
-            this.txtBox_ErstePersonSingularPerfektKonjunktiv.Location = new System.Drawing.Point(776, 224);
+            this.txtBox_ErstePersonSingularPerfektKonjunktiv.Location = new System.Drawing.Point(1035, 276);
+            this.txtBox_ErstePersonSingularPerfektKonjunktiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_ErstePersonSingularPerfektKonjunktiv.Name = "txtBox_ErstePersonSingularPerfektKonjunktiv";
-            this.txtBox_ErstePersonSingularPerfektKonjunktiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_ErstePersonSingularPerfektKonjunktiv.TabIndex = 93;
+            this.txtBox_ErstePersonSingularPerfektKonjunktiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ErstePersonSingularPerfektKonjunktiv.TabIndex = 44;
             // 
             // lbl_Infinitiv
             // 
             this.lbl_Infinitiv.AutoSize = true;
-            this.lbl_Infinitiv.Location = new System.Drawing.Point(680, 8);
+            this.lbl_Infinitiv.Location = new System.Drawing.Point(907, 10);
+            this.lbl_Infinitiv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Infinitiv.Name = "lbl_Infinitiv";
-            this.lbl_Infinitiv.Size = new System.Drawing.Size(40, 13);
+            this.lbl_Infinitiv.Size = new System.Drawing.Size(51, 17);
             this.lbl_Infinitiv.TabIndex = 111;
             this.lbl_Infinitiv.Text = "Infinitiv";
             // 
             // txtBox_Infinitiv
             // 
-            this.txtBox_Infinitiv.Location = new System.Drawing.Point(656, 24);
+            this.txtBox_Infinitiv.Location = new System.Drawing.Point(875, 30);
+            this.txtBox_Infinitiv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_Infinitiv.Name = "txtBox_Infinitiv";
-            this.txtBox_Infinitiv.Size = new System.Drawing.Size(100, 20);
-            this.txtBox_Infinitiv.TabIndex = 112;
+            this.txtBox_Infinitiv.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_Infinitiv.TabIndex = 1;
+            // 
+            // btn_VerbHinzufuegen
+            // 
+            this.btn_VerbHinzufuegen.Location = new System.Drawing.Point(1579, 876);
+            this.btn_VerbHinzufuegen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_VerbHinzufuegen.Name = "btn_VerbHinzufuegen";
+            this.btn_VerbHinzufuegen.Size = new System.Drawing.Size(149, 23);
+            this.btn_VerbHinzufuegen.TabIndex = 64;
+            this.btn_VerbHinzufuegen.Text = "Verb hinzufügen";
+            this.btn_VerbHinzufuegen.UseVisualStyleBackColor = true;
+            this.btn_VerbHinzufuegen.Click += new System.EventHandler(this.btn_VerbHinzufuegen_Click);
+            // 
+            // lbl_ZuDeutsch
+            // 
+            this.lbl_ZuDeutsch.AutoSize = true;
+            this.lbl_ZuDeutsch.Location = new System.Drawing.Point(875, 69);
+            this.lbl_ZuDeutsch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_ZuDeutsch.Name = "lbl_ZuDeutsch";
+            this.lbl_ZuDeutsch.Size = new System.Drawing.Size(85, 17);
+            this.lbl_ZuDeutsch.TabIndex = 113;
+            this.lbl_ZuDeutsch.Text = "Zu Deutsch:";
+            // 
+            // txtBox_ZuDeutsch
+            // 
+            this.txtBox_ZuDeutsch.Location = new System.Drawing.Point(875, 89);
+            this.txtBox_ZuDeutsch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBox_ZuDeutsch.Name = "txtBox_ZuDeutsch";
+            this.txtBox_ZuDeutsch.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZuDeutsch.TabIndex = 112;
             // 
             // Verbs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1471, 767);
+            this.BackgroundImage = global::learnLatin.Properties.Resources.roman_city;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1924, 944);
+            this.Controls.Add(this.lbl_ZuDeutsch);
+            this.Controls.Add(this.txtBox_ZuDeutsch);
+            this.Controls.Add(this.btn_VerbHinzufuegen);
             this.Controls.Add(this.txtBox_Infinitiv);
             this.Controls.Add(this.lbl_Infinitiv);
             this.Controls.Add(this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv);
@@ -996,7 +1138,7 @@
             this.Controls.Add(this.txtBox_ZweitePersonPluralFutur_IIndikativ);
             this.Controls.Add(this.txtBox_ZweitePersonSingularFutur_IIndikativ);
             this.Controls.Add(this.txtBox_ErstePersonPluralFutur_IIndikativ);
-            this.Controls.Add(this.txtBox_ErstePersonSingularFutur_IImperfekt);
+            this.Controls.Add(this.txtBox_ErstePersonSingularFutur_IIndikativ);
             this.Controls.Add(this.txtBox_DrittePersonPluralPlusquamperfektIndikativ);
             this.Controls.Add(this.txtBox_DrittePersonSingularPlusquamperfektIndikativ);
             this.Controls.Add(this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ);
@@ -1070,8 +1212,9 @@
             this.Controls.Add(this.lbl_Indikativ);
             this.Controls.Add(this.btn_LueckenFuellen);
             this.Controls.Add(this.btn_NaechstesVerb);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Verbs";
-            this.Text = "Verbs";
+            this.Text = "Verben";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Verbs_FormClosing);
             this.Load += new System.EventHandler(this.Verbs_Load);
             this.ResumeLayout(false);
@@ -1159,7 +1302,7 @@
         private System.Windows.Forms.TextBox txtBox_ZweitePersonPluralFutur_IIndikativ;
         private System.Windows.Forms.TextBox txtBox_ZweitePersonSingularFutur_IIndikativ;
         private System.Windows.Forms.TextBox txtBox_ErstePersonPluralFutur_IIndikativ;
-        private System.Windows.Forms.TextBox txtBox_ErstePersonSingularFutur_IImperfekt;
+        private System.Windows.Forms.TextBox txtBox_ErstePersonSingularFutur_IIndikativ;
         private System.Windows.Forms.TextBox txtBox_DrittePersonPluralFutur_IIIndikativ;
         private System.Windows.Forms.TextBox txtBox_DrittePersonSingularFutur_IIIndikativ;
         private System.Windows.Forms.TextBox txtBox_ZweitePersonPluralFutur_IIIndikativ;
@@ -1186,5 +1329,8 @@
         private System.Windows.Forms.TextBox txtBox_ErstePersonSingularPerfektKonjunktiv;
         private System.Windows.Forms.Label lbl_Infinitiv;
         private System.Windows.Forms.TextBox txtBox_Infinitiv;
+        private System.Windows.Forms.Button btn_VerbHinzufuegen;
+        private System.Windows.Forms.Label lbl_ZuDeutsch;
+        private System.Windows.Forms.TextBox txtBox_ZuDeutsch;
     }
 }

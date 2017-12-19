@@ -29,10 +29,101 @@ namespace learnLatin
             this.ausgewaehltesVerb = CollectionExtension.RandomElement(this.VerbenListe);
 
             this.txtBox_Infinitiv.Text = this.ausgewaehltesVerb.Infinitiv;
+
+            this.clearTextBoxes();
+        }
+
+        private void clearTextBoxes()
+        {
+            this.txtBox_ZuDeutsch.Text = String.Empty;
+
+            //Indikativ
+            //Praesens
+            this.txtBox_ErstePersonSingularPraesensIndikativ.Text = String.Empty;
+            this.txtBox_ErstePersonPluralPraesensIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularPraesensIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralPraesensIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonSingularPraesensIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonPluralPraesensIndikativ.Text = String.Empty;
+
+            //Perfekt
+            this.txtBox_ErstePersonSingularPerfektIndikativ.Text = String.Empty;
+            this.txtBox_ErstePersonPluralPerfektIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularPerfektIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralPerfektIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonSingularPerfektIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonPluralPerfektIndikativ.Text = String.Empty;
+
+            //Imperfekt
+            this.txtBox_ErstePersonSingularImperfektIndikativ.Text = String.Empty;
+            this.txtBox_ErstePersonPluralImperfektIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularImperfektIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralImperfektIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonSingularImperfektIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonPluralImperfektIndikativ.Text = String.Empty;
+
+            //Plusquamperfekt
+            this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.Text = String.Empty;
+            this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Text = String.Empty;
+
+            //Futur I
+            this.txtBox_ErstePersonSingularFutur_IIndikativ.Text = String.Empty;
+            this.txtBox_ErstePersonPluralFutur_IIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularFutur_IIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralFutur_IIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonSingularFutur_IIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonPluralFutur_IIndikativ.Text = String.Empty;
+
+            //Futur II
+            this.txtBox_ErstePersonSingularFutur_IIIndikativ.Text = String.Empty;
+            this.txtBox_ErstePersonPluralFutur_IIIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularFutur_IIIndikativ.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralFutur_IIIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonSingularFutur_IIIndikativ.Text = String.Empty;
+            this.txtBox_DrittePersonPluralFutur_IIIndikativ.Text = String.Empty;
+
+            //Konjunktiv
+            //Praesens
+            this.txtBox_ErstePersonSingularPraesensKonjunktiv.Text = String.Empty;
+            this.txtBox_ErstePersonPluralPraesensKonjunktiv.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralPraesensKonjunktiv.Text = String.Empty;
+            this.txtBox_DrittePersonSingularPraesensKonjunktiv.Text = String.Empty;
+            this.txtBox_DrittePersonPluralPraesensKonjunktiv.Text = String.Empty;
+
+            //Perfekt
+            this.txtBox_ErstePersonSingularPerfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ErstePersonPluralPerfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularPerfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralPerfektKonjunktiv.Text = String.Empty;
+            this.txtBox_DrittePersonSingularPerfektKonjunktiv.Text = String.Empty;
+            this.txtBox_DrittePersonPluralPerfektKonjunktiv.Text = String.Empty;
+
+            //Imperfekt
+            this.txtBox_ErstePersonSingularImperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ErstePersonPluralImperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularImperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralImperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_DrittePersonSingularImperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_DrittePersonPluralImperfektKonjunktiv.Text = String.Empty;
+
+            //Plusquamperfekt
+            this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.Text = String.Empty;
+            this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Text = String.Empty;
         }
 
         private void btn_LueckenFuellen_Click(Object sender, EventArgs e)
         {
+            this.txtBox_ZuDeutsch.Text = this.ausgewaehltesVerb.ZuDeutsch;
+
             //Indikativ
             //Praesens
             this.txtBox_ErstePersonSingularPraesensIndikativ.Text = this.ausgewaehltesVerb.ErstePersonSingularPraesensIndikativ;
@@ -67,7 +158,7 @@ namespace learnLatin
             this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Text = this.ausgewaehltesVerb.DrittePersonPluralPlusquamperfektIndikativ;
 
             //Futur I
-            this.txtBox_ErstePersonSingularFutur_IImperfekt.Text = this.ausgewaehltesVerb.ErstePersonSingularFutur_I_Indikativ;
+            this.txtBox_ErstePersonSingularFutur_IIndikativ.Text = this.ausgewaehltesVerb.ErstePersonSingularFutur_I_Indikativ;
             this.txtBox_ErstePersonPluralFutur_IIndikativ.Text = this.ausgewaehltesVerb.ErstePersonPluralFutur_I_Indikativ;
             this.txtBox_ZweitePersonSingularFutur_IIndikativ.Text = this.ausgewaehltesVerb.ZweitePersonSingularFutur_I_Indikativ;
             this.txtBox_ZweitePersonPluralFutur_IIndikativ.Text = this.ausgewaehltesVerb.ZweitePersonPluralFutur_I_Indikativ;
@@ -116,9 +207,9 @@ namespace learnLatin
             this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Text = this.ausgewaehltesVerb.DrittePersonPluralPlusquamperfektKonjunktiv;
         }
 
-        public void FillVerbenListe()
+        public void FillVerbenListeWithDefaults()
         {
-            /*this.VerbenListe.Add(new Verb("properare"));
+            this.VerbenListe.Add(new Verb("properare", "eilen, sich beeilen"));
             this.VerbenListe[0].SetPraesensIndikativ("propero", "peroperas", "properat", "properamus", "properatis", "properant");
             this.VerbenListe[0].SetPerfektIndikativ("properavi", "properavisti", "properavit", "properavimus", "properavisti", "properaverunt");
             this.VerbenListe[0].SetImperfektIndikativ("properabam", "properabas", "properabat", "properabamus", "properabatis", "properabant");
@@ -128,7 +219,7 @@ namespace learnLatin
             this.VerbenListe[0].SetPraesensKonjunktiv("properem", "properes", "properet", "properemus", "properetis", "properent");
             this.VerbenListe[0].SetPerfektKonjunktiv("properaverim", "properaveris", "properaveret", "properemus", "properetis", "properent");
             this.VerbenListe[0].SetImperfektKonjunktiv("properarem", "properares", "properaret", "properaremus", "properaretis", "properarent");
-            this.VerbenListe[0].SetPlusquamperfektKonjunktiv("properavissem", "properavisses", "properavisset", "properavissemus", "properavissetis", "properavissent");*/
+            this.VerbenListe[0].SetPlusquamperfektKonjunktiv("properavissem", "properavisses", "properavisset", "properavissemus", "properavissetis", "properavissent");
         }
 
         private void saveVerbenListeAsTextFile()
@@ -168,7 +259,7 @@ namespace learnLatin
                     verb.ZweitePersonSingularPlusquamperfektKonjunktiv + ";" + verb.ZweitePersonPluralPlusquamperfektKonjunktiv + ";" + verb.DrittePersonSingularPlusquamperfektKonjunktiv + ";" +
                     verb.DrittePersonPluralPlusquamperfektKonjunktiv;
 
-                line = indikativ + konjunktiv;
+                line = indikativ + konjunktiv + "|" + verb.ZuDeutsch;
 
                 writer.WriteLine(line);
             }
@@ -198,10 +289,11 @@ namespace learnLatin
             while((line = reader.ReadLine()) != null)
             {
                 String infinitiv = line.Split('|')[0];
+                String zuDeutsch = line.Split('|')[3];
                 String indikativString = line.Split('|')[1];
                 String konjunktivString = line.Split('|')[2];
 
-                verb = new Verb(infinitiv);
+                verb = new Verb(infinitiv, zuDeutsch);
 
                 String praesens = indikativString.Split('#')[0];
                 String perfekt = indikativString.Split('#')[1];
@@ -247,7 +339,7 @@ namespace learnLatin
             this.fillVerbenListeFromTextFile();
 
             if(this.VerbenListe.Count== 0)
-                FillVerbenListe();
+                FillVerbenListeWithDefaults();
 
             this.btn_NaechstesVerb.PerformClick();
         }
@@ -255,6 +347,65 @@ namespace learnLatin
         private void Verbs_FormClosing(Object sender, FormClosingEventArgs e)
         {
             this.saveVerbenListeAsTextFile();
+        }
+
+        private void btn_VerbHinzufuegen_Click(Object sender, EventArgs e)
+        {
+            Verb verb = new Verb(this.txtBox_Infinitiv.Text, this.txtBox_ZuDeutsch.Text);
+
+            //Indikativ
+            verb.SetPraesensIndikativ(this.txtBox_ErstePersonSingularPraesensIndikativ.Text, this.txtBox_ErstePersonPluralPraesensIndikativ.Text,
+                this.txtBox_ZweitePersonSingularPraesensIndikativ.Text, this.txtBox_ZweitePersonPluralPraesensIndikativ.Text,
+                this.txtBox_DrittePersonSingularPraesensIndikativ.Text, this.txtBox_DrittePersonPluralPraesensIndikativ.Text);
+
+            verb.SetPerfektIndikativ(this.txtBox_ErstePersonSingularPerfektIndikativ.Text, this.txtBox_ErstePersonPluralPerfektIndikativ.Text,
+                this.txtBox_ZweitePersonSingularPerfektIndikativ.Text, this.txtBox_ZweitePersonPluralPerfektIndikativ.Text,
+                this.txtBox_DrittePersonSingularPerfektIndikativ.Text, this.txtBox_DrittePersonPluralPerfektIndikativ.Text);
+
+            verb.SetImperfektIndikativ(this.txtBox_ErstePersonSingularImperfektIndikativ.Text, this.txtBox_ErstePersonPluralImperfektIndikativ.Text,
+                this.txtBox_ZweitePersonSingularImperfektIndikativ.Text, this.txtBox_ZweitePersonPluralImperfektIndikativ.Text,
+                this.txtBox_DrittePersonSingularImperfektIndikativ.Text, this.txtBox_DrittePersonPluralImperfektIndikativ.Text);
+
+            verb.SetPlusquamperfektIndikativ(this.txtBox_ErstePersonSingularPlusquamperfektIndikativ.Text, this.txtBox_ErstePersonPluralPlusquamperfektIndikativ.Text,
+                this.txtBox_ZweitePersonSingularPlusquamperfektIndikativ.Text, this.txtBox_ZweitePersonPluralPlusquamperfektIndikativ.Text,
+                this.txtBox_DrittePersonSingularPlusquamperfektIndikativ.Text, this.txtBox_DrittePersonPluralPlusquamperfektIndikativ.Text);
+
+            verb.SetFutur_I_Indikativ(this.txtBox_ErstePersonSingularFutur_IIndikativ.Text, this.txtBox_ErstePersonPluralFutur_IIndikativ.Text,
+                this.txtBox_ZweitePersonSingularFutur_IIndikativ.Text, this.txtBox_ZweitePersonPluralFutur_IIndikativ.Text,
+                this.txtBox_DrittePersonSingularFutur_IIndikativ.Text, this.txtBox_DrittePersonPluralFutur_IIndikativ.Text);
+
+            verb.SetFutur_II_Indikativ(this.txtBox_ErstePersonPluralFutur_IIIndikativ.Text, this.txtBox_ErstePersonPluralFutur_IIIndikativ.Text,
+                this.txtBox_ZweitePersonSingularFutur_IIIndikativ.Text, this.txtBox_ZweitePersonPluralFutur_IIIndikativ.Text,
+                this.txtBox_DrittePersonSingularFutur_IIIndikativ.Text, this.txtBox_DrittePersonPluralFutur_IIIndikativ.Text);
+
+
+            //Konjunktiv
+            verb.SetPraesensKonjunktiv(this.txtBox_ErstePersonSingularPraesensKonjunktiv.Text, this.txtBox_ErstePersonPluralPraesensKonjunktiv.Text,
+            this.txtBox_ZweitePersonSingularPraesensKonjunktiv.Text, this.txtBox_ZweitePersonPluralPraesensKonjunktiv.Text,
+            this.txtBox_DrittePersonSingularPraesensKonjunktiv.Text, this.txtBox_DrittePersonPluralPraesensKonjunktiv.Text);
+
+            verb.SetPerfektKonjunktiv(this.txtBox_ErstePersonSingularPerfektKonjunktiv.Text, this.txtBox_ErstePersonPluralPerfektKonjunktiv.Text,
+                this.txtBox_ZweitePersonSingularPerfektKonjunktiv.Text, this.txtBox_ZweitePersonPluralPerfektKonjunktiv.Text,
+                this.txtBox_DrittePersonSingularPerfektKonjunktiv.Text, this.txtBox_DrittePersonPluralPerfektKonjunktiv.Text);
+
+            verb.SetImperfektKonjunktiv(this.txtBox_ErstePersonSingularImperfektKonjunktiv.Text, this.txtBox_ErstePersonPluralImperfektKonjunktiv.Text,
+                this.txtBox_ZweitePersonSingularImperfektKonjunktiv.Text, this.txtBox_ZweitePersonPluralImperfektKonjunktiv.Text,
+                this.txtBox_DrittePersonSingularImperfektKonjunktiv.Text, this.txtBox_DrittePersonPluralImperfektKonjunktiv.Text);
+
+            verb.SetPlusquamperfektKonjunktiv(this.txtBox_ErstePersonSingularPlusquamperfektKonjunktiv.Text, this.txtBox_ErstePersonPluralPlusquamperfektKonjunktiv.Text,
+                this.txtBox_ZweitePersonSingularPlusquamperfektKonjunktiv.Text, this.txtBox_ZweitePersonPluralPlusquamperfektKonjunktiv.Text,
+                this.txtBox_DrittePersonSingularPlusquamperfektKonjunktiv.Text, this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Text);
+
+
+
+            this.VerbenListe.Add(verb);
+            verb = null;
+
+            this.saveVerbenListeAsTextFile();
+
+            MessageBox.Show("Das Verb wurde erfolgreich hinzugefügt!");
+
+            this.btn_NaechstesVerb.PerformClick();
         }
     }
 
@@ -272,6 +423,7 @@ namespace learnLatin
     public class Verb
     {
         public String Infinitiv;
+        public String ZuDeutsch;
 
         //Indikativ
         //Praesens
@@ -467,9 +619,10 @@ namespace learnLatin
         }
 
 
-        public Verb(String Infinitiv)
+        public Verb(String Infinitiv, String ZuDeutsch)
         {
             this.Infinitiv = Infinitiv;
+            this.ZuDeutsch = ZuDeutsch;
         }
     }
 }

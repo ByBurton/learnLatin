@@ -52,13 +52,17 @@
             this.txtBox_AkkusativPlural = new System.Windows.Forms.TextBox();
             this.lbl_AblativPlural = new System.Windows.Forms.Label();
             this.txtBox_AblativPlural = new System.Windows.Forms.TextBox();
+            this.btn_NomenHinzufuegen = new System.Windows.Forms.Button();
+            this.txtBox_ZuDeutsch = new System.Windows.Forms.TextBox();
+            this.lbl_ZuDeutsch = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_NaechstesNomen
             // 
-            this.btn_NaechstesNomen.Location = new System.Drawing.Point(336, 152);
+            this.btn_NaechstesNomen.Location = new System.Drawing.Point(448, 187);
+            this.btn_NaechstesNomen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_NaechstesNomen.Name = "btn_NaechstesNomen";
-            this.btn_NaechstesNomen.Size = new System.Drawing.Size(112, 23);
+            this.btn_NaechstesNomen.Size = new System.Drawing.Size(149, 28);
             this.btn_NaechstesNomen.TabIndex = 0;
             this.btn_NaechstesNomen.Text = "Nächstes Nomen";
             this.btn_NaechstesNomen.UseVisualStyleBackColor = true;
@@ -66,9 +70,10 @@
             // 
             // btn_LueckenFuellen
             // 
-            this.btn_LueckenFuellen.Location = new System.Drawing.Point(336, 120);
+            this.btn_LueckenFuellen.Location = new System.Drawing.Point(448, 148);
+            this.btn_LueckenFuellen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_LueckenFuellen.Name = "btn_LueckenFuellen";
-            this.btn_LueckenFuellen.Size = new System.Drawing.Size(112, 23);
+            this.btn_LueckenFuellen.Size = new System.Drawing.Size(149, 28);
             this.btn_LueckenFuellen.TabIndex = 1;
             this.btn_LueckenFuellen.Text = "Lücken aufdecken";
             this.btn_LueckenFuellen.UseVisualStyleBackColor = true;
@@ -76,187 +81,243 @@
             // 
             // txtBox_NominativSingular
             // 
-            this.txtBox_NominativSingular.Location = new System.Drawing.Point(80, 72);
+            this.txtBox_NominativSingular.Location = new System.Drawing.Point(107, 89);
+            this.txtBox_NominativSingular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_NominativSingular.Name = "txtBox_NominativSingular";
-            this.txtBox_NominativSingular.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_NominativSingular.Size = new System.Drawing.Size(132, 22);
             this.txtBox_NominativSingular.TabIndex = 2;
             // 
             // lbl_Singular
             // 
             this.lbl_Singular.AutoSize = true;
-            this.lbl_Singular.Location = new System.Drawing.Point(80, 24);
+            this.lbl_Singular.Location = new System.Drawing.Point(107, 30);
+            this.lbl_Singular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Singular.Name = "lbl_Singular";
-            this.lbl_Singular.Size = new System.Drawing.Size(45, 13);
+            this.lbl_Singular.Size = new System.Drawing.Size(60, 17);
             this.lbl_Singular.TabIndex = 3;
             this.lbl_Singular.Text = "Singular";
             // 
             // lbl_NominativSingular
             // 
             this.lbl_NominativSingular.AutoSize = true;
-            this.lbl_NominativSingular.Location = new System.Drawing.Point(80, 56);
+            this.lbl_NominativSingular.Location = new System.Drawing.Point(107, 69);
+            this.lbl_NominativSingular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NominativSingular.Name = "lbl_NominativSingular";
-            this.lbl_NominativSingular.Size = new System.Drawing.Size(54, 13);
+            this.lbl_NominativSingular.Size = new System.Drawing.Size(70, 17);
             this.lbl_NominativSingular.TabIndex = 4;
             this.lbl_NominativSingular.Text = "Nominativ";
             // 
             // lbl_GenitivSingular
             // 
             this.lbl_GenitivSingular.AutoSize = true;
-            this.lbl_GenitivSingular.Location = new System.Drawing.Point(80, 96);
+            this.lbl_GenitivSingular.Location = new System.Drawing.Point(107, 118);
+            this.lbl_GenitivSingular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_GenitivSingular.Name = "lbl_GenitivSingular";
-            this.lbl_GenitivSingular.Size = new System.Drawing.Size(40, 13);
+            this.lbl_GenitivSingular.Size = new System.Drawing.Size(52, 17);
             this.lbl_GenitivSingular.TabIndex = 6;
             this.lbl_GenitivSingular.Text = "Genitiv";
             // 
             // txtBox_GenitivSingular
             // 
-            this.txtBox_GenitivSingular.Location = new System.Drawing.Point(80, 112);
+            this.txtBox_GenitivSingular.Location = new System.Drawing.Point(107, 138);
+            this.txtBox_GenitivSingular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_GenitivSingular.Name = "txtBox_GenitivSingular";
-            this.txtBox_GenitivSingular.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_GenitivSingular.Size = new System.Drawing.Size(132, 22);
             this.txtBox_GenitivSingular.TabIndex = 5;
             // 
             // lbl_DativSingular
             // 
             this.lbl_DativSingular.AutoSize = true;
-            this.lbl_DativSingular.Location = new System.Drawing.Point(80, 136);
+            this.lbl_DativSingular.Location = new System.Drawing.Point(107, 167);
+            this.lbl_DativSingular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DativSingular.Name = "lbl_DativSingular";
-            this.lbl_DativSingular.Size = new System.Drawing.Size(32, 13);
+            this.lbl_DativSingular.Size = new System.Drawing.Size(40, 17);
             this.lbl_DativSingular.TabIndex = 8;
             this.lbl_DativSingular.Text = "Dativ";
             // 
             // txtBox_DativSingular
             // 
-            this.txtBox_DativSingular.Location = new System.Drawing.Point(80, 152);
+            this.txtBox_DativSingular.Location = new System.Drawing.Point(107, 187);
+            this.txtBox_DativSingular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DativSingular.Name = "txtBox_DativSingular";
-            this.txtBox_DativSingular.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_DativSingular.Size = new System.Drawing.Size(132, 22);
             this.txtBox_DativSingular.TabIndex = 7;
             // 
             // lbl_AkkusativSingular
             // 
             this.lbl_AkkusativSingular.AutoSize = true;
-            this.lbl_AkkusativSingular.Location = new System.Drawing.Point(80, 176);
+            this.lbl_AkkusativSingular.Location = new System.Drawing.Point(107, 217);
+            this.lbl_AkkusativSingular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AkkusativSingular.Name = "lbl_AkkusativSingular";
-            this.lbl_AkkusativSingular.Size = new System.Drawing.Size(54, 13);
+            this.lbl_AkkusativSingular.Size = new System.Drawing.Size(68, 17);
             this.lbl_AkkusativSingular.TabIndex = 10;
             this.lbl_AkkusativSingular.Text = "Akkusativ";
             // 
             // txtBox_AkkusativSingular
             // 
-            this.txtBox_AkkusativSingular.Location = new System.Drawing.Point(80, 192);
+            this.txtBox_AkkusativSingular.Location = new System.Drawing.Point(107, 236);
+            this.txtBox_AkkusativSingular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_AkkusativSingular.Name = "txtBox_AkkusativSingular";
-            this.txtBox_AkkusativSingular.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_AkkusativSingular.Size = new System.Drawing.Size(132, 22);
             this.txtBox_AkkusativSingular.TabIndex = 9;
             // 
             // lbl_AblativSingular
             // 
             this.lbl_AblativSingular.AutoSize = true;
-            this.lbl_AblativSingular.Location = new System.Drawing.Point(80, 216);
+            this.lbl_AblativSingular.Location = new System.Drawing.Point(107, 266);
+            this.lbl_AblativSingular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AblativSingular.Name = "lbl_AblativSingular";
-            this.lbl_AblativSingular.Size = new System.Drawing.Size(39, 13);
+            this.lbl_AblativSingular.Size = new System.Drawing.Size(50, 17);
             this.lbl_AblativSingular.TabIndex = 12;
             this.lbl_AblativSingular.Text = "Ablativ";
             // 
             // txtBox_AblativSingular
             // 
-            this.txtBox_AblativSingular.Location = new System.Drawing.Point(80, 232);
+            this.txtBox_AblativSingular.Location = new System.Drawing.Point(107, 286);
+            this.txtBox_AblativSingular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_AblativSingular.Name = "txtBox_AblativSingular";
-            this.txtBox_AblativSingular.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_AblativSingular.Size = new System.Drawing.Size(132, 22);
             this.txtBox_AblativSingular.TabIndex = 11;
             // 
             // lbl_NominativPlural
             // 
             this.lbl_NominativPlural.AutoSize = true;
-            this.lbl_NominativPlural.Location = new System.Drawing.Point(200, 56);
+            this.lbl_NominativPlural.Location = new System.Drawing.Point(267, 69);
+            this.lbl_NominativPlural.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NominativPlural.Name = "lbl_NominativPlural";
-            this.lbl_NominativPlural.Size = new System.Drawing.Size(54, 13);
+            this.lbl_NominativPlural.Size = new System.Drawing.Size(70, 17);
             this.lbl_NominativPlural.TabIndex = 14;
             this.lbl_NominativPlural.Text = "Nominativ";
             // 
             // txtBox_NominativPlural
             // 
-            this.txtBox_NominativPlural.Location = new System.Drawing.Point(200, 72);
+            this.txtBox_NominativPlural.Location = new System.Drawing.Point(267, 89);
+            this.txtBox_NominativPlural.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_NominativPlural.Name = "txtBox_NominativPlural";
-            this.txtBox_NominativPlural.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_NominativPlural.Size = new System.Drawing.Size(132, 22);
             this.txtBox_NominativPlural.TabIndex = 13;
             // 
             // lbl_Plural
             // 
             this.lbl_Plural.AutoSize = true;
-            this.lbl_Plural.Location = new System.Drawing.Point(200, 24);
+            this.lbl_Plural.Location = new System.Drawing.Point(267, 30);
+            this.lbl_Plural.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Plural.Name = "lbl_Plural";
-            this.lbl_Plural.Size = new System.Drawing.Size(33, 13);
+            this.lbl_Plural.Size = new System.Drawing.Size(44, 17);
             this.lbl_Plural.TabIndex = 15;
             this.lbl_Plural.Text = "Plural";
             // 
             // lbl_GenitivPlural
             // 
             this.lbl_GenitivPlural.AutoSize = true;
-            this.lbl_GenitivPlural.Location = new System.Drawing.Point(200, 96);
+            this.lbl_GenitivPlural.Location = new System.Drawing.Point(267, 118);
+            this.lbl_GenitivPlural.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_GenitivPlural.Name = "lbl_GenitivPlural";
-            this.lbl_GenitivPlural.Size = new System.Drawing.Size(40, 13);
+            this.lbl_GenitivPlural.Size = new System.Drawing.Size(52, 17);
             this.lbl_GenitivPlural.TabIndex = 17;
             this.lbl_GenitivPlural.Text = "Genitiv";
             // 
             // txtBox_GenitivPlural
             // 
-            this.txtBox_GenitivPlural.Location = new System.Drawing.Point(200, 112);
+            this.txtBox_GenitivPlural.Location = new System.Drawing.Point(267, 138);
+            this.txtBox_GenitivPlural.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_GenitivPlural.Name = "txtBox_GenitivPlural";
-            this.txtBox_GenitivPlural.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_GenitivPlural.Size = new System.Drawing.Size(132, 22);
             this.txtBox_GenitivPlural.TabIndex = 16;
             // 
             // lbl_DativPlural
             // 
             this.lbl_DativPlural.AutoSize = true;
-            this.lbl_DativPlural.Location = new System.Drawing.Point(200, 136);
+            this.lbl_DativPlural.Location = new System.Drawing.Point(267, 167);
+            this.lbl_DativPlural.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DativPlural.Name = "lbl_DativPlural";
-            this.lbl_DativPlural.Size = new System.Drawing.Size(32, 13);
+            this.lbl_DativPlural.Size = new System.Drawing.Size(40, 17);
             this.lbl_DativPlural.TabIndex = 19;
             this.lbl_DativPlural.Text = "Dativ";
             // 
             // txtBox_DativPlural
             // 
-            this.txtBox_DativPlural.Location = new System.Drawing.Point(200, 152);
+            this.txtBox_DativPlural.Location = new System.Drawing.Point(267, 187);
+            this.txtBox_DativPlural.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_DativPlural.Name = "txtBox_DativPlural";
-            this.txtBox_DativPlural.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_DativPlural.Size = new System.Drawing.Size(132, 22);
             this.txtBox_DativPlural.TabIndex = 18;
             // 
             // lbl_AkkusativPlural
             // 
             this.lbl_AkkusativPlural.AutoSize = true;
-            this.lbl_AkkusativPlural.Location = new System.Drawing.Point(200, 176);
+            this.lbl_AkkusativPlural.Location = new System.Drawing.Point(267, 217);
+            this.lbl_AkkusativPlural.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AkkusativPlural.Name = "lbl_AkkusativPlural";
-            this.lbl_AkkusativPlural.Size = new System.Drawing.Size(54, 13);
+            this.lbl_AkkusativPlural.Size = new System.Drawing.Size(68, 17);
             this.lbl_AkkusativPlural.TabIndex = 21;
             this.lbl_AkkusativPlural.Text = "Akkusativ";
             // 
             // txtBox_AkkusativPlural
             // 
-            this.txtBox_AkkusativPlural.Location = new System.Drawing.Point(200, 192);
+            this.txtBox_AkkusativPlural.Location = new System.Drawing.Point(267, 236);
+            this.txtBox_AkkusativPlural.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_AkkusativPlural.Name = "txtBox_AkkusativPlural";
-            this.txtBox_AkkusativPlural.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_AkkusativPlural.Size = new System.Drawing.Size(132, 22);
             this.txtBox_AkkusativPlural.TabIndex = 20;
             // 
             // lbl_AblativPlural
             // 
             this.lbl_AblativPlural.AutoSize = true;
-            this.lbl_AblativPlural.Location = new System.Drawing.Point(200, 216);
+            this.lbl_AblativPlural.Location = new System.Drawing.Point(267, 266);
+            this.lbl_AblativPlural.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AblativPlural.Name = "lbl_AblativPlural";
-            this.lbl_AblativPlural.Size = new System.Drawing.Size(39, 13);
+            this.lbl_AblativPlural.Size = new System.Drawing.Size(50, 17);
             this.lbl_AblativPlural.TabIndex = 23;
             this.lbl_AblativPlural.Text = "Ablativ";
             // 
             // txtBox_AblativPlural
             // 
-            this.txtBox_AblativPlural.Location = new System.Drawing.Point(200, 232);
+            this.txtBox_AblativPlural.Location = new System.Drawing.Point(267, 286);
+            this.txtBox_AblativPlural.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBox_AblativPlural.Name = "txtBox_AblativPlural";
-            this.txtBox_AblativPlural.Size = new System.Drawing.Size(100, 20);
+            this.txtBox_AblativPlural.Size = new System.Drawing.Size(132, 22);
             this.txtBox_AblativPlural.TabIndex = 22;
+            // 
+            // btn_NomenHinzufuegen
+            // 
+            this.btn_NomenHinzufuegen.Location = new System.Drawing.Point(832, 492);
+            this.btn_NomenHinzufuegen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_NomenHinzufuegen.Name = "btn_NomenHinzufuegen";
+            this.btn_NomenHinzufuegen.Size = new System.Drawing.Size(149, 28);
+            this.btn_NomenHinzufuegen.TabIndex = 24;
+            this.btn_NomenHinzufuegen.Text = "Nomen hinzufügen";
+            this.btn_NomenHinzufuegen.UseVisualStyleBackColor = true;
+            this.btn_NomenHinzufuegen.Click += new System.EventHandler(this.btn_NomenHinzufuegen_Click);
+            // 
+            // txtBox_ZuDeutsch
+            // 
+            this.txtBox_ZuDeutsch.Location = new System.Drawing.Point(96, 492);
+            this.txtBox_ZuDeutsch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBox_ZuDeutsch.Name = "txtBox_ZuDeutsch";
+            this.txtBox_ZuDeutsch.Size = new System.Drawing.Size(132, 22);
+            this.txtBox_ZuDeutsch.TabIndex = 25;
+            // 
+            // lbl_ZuDeutsch
+            // 
+            this.lbl_ZuDeutsch.AutoSize = true;
+            this.lbl_ZuDeutsch.Location = new System.Drawing.Point(96, 473);
+            this.lbl_ZuDeutsch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_ZuDeutsch.Name = "lbl_ZuDeutsch";
+            this.lbl_ZuDeutsch.Size = new System.Drawing.Size(85, 17);
+            this.lbl_ZuDeutsch.TabIndex = 26;
+            this.lbl_ZuDeutsch.Text = "Zu Deutsch:";
             // 
             // Nouns
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 436);
+            this.BackgroundImage = global::learnLatin.Properties.Resources.roman_city;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(984, 537);
+            this.Controls.Add(this.lbl_ZuDeutsch);
+            this.Controls.Add(this.txtBox_ZuDeutsch);
+            this.Controls.Add(this.btn_NomenHinzufuegen);
             this.Controls.Add(this.lbl_AblativPlural);
             this.Controls.Add(this.txtBox_AblativPlural);
             this.Controls.Add(this.lbl_AkkusativPlural);
@@ -281,8 +342,9 @@
             this.Controls.Add(this.txtBox_NominativSingular);
             this.Controls.Add(this.btn_LueckenFuellen);
             this.Controls.Add(this.btn_NaechstesNomen);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Nouns";
-            this.Text = "nouns";
+            this.Text = "Nomen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Nouns_FormClosing);
             this.Load += new System.EventHandler(this.nouns_Load);
             this.ResumeLayout(false);
@@ -316,5 +378,8 @@
         private System.Windows.Forms.TextBox txtBox_AkkusativPlural;
         private System.Windows.Forms.Label lbl_AblativPlural;
         private System.Windows.Forms.TextBox txtBox_AblativPlural;
+        private System.Windows.Forms.Button btn_NomenHinzufuegen;
+        private System.Windows.Forms.TextBox txtBox_ZuDeutsch;
+        private System.Windows.Forms.Label lbl_ZuDeutsch;
     }
 }

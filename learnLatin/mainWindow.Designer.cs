@@ -67,11 +67,11 @@
             // 
             // btn_AndereWoerter
             // 
-            this.btn_AndereWoerter.Location = new System.Drawing.Point(376, 64);
+            this.btn_AndereWoerter.Location = new System.Drawing.Point(184, 16);
             this.btn_AndereWoerter.Name = "btn_AndereWoerter";
             this.btn_AndereWoerter.Size = new System.Drawing.Size(80, 23);
             this.btn_AndereWoerter.TabIndex = 3;
-            this.btn_AndereWoerter.Text = "Andere Wörter";
+            this.btn_AndereWoerter.Text = "Einzelwörter";
             this.btn_AndereWoerter.UseVisualStyleBackColor = true;
             this.btn_AndereWoerter.Click += new System.EventHandler(this.btn_OtherWords_Click);
             // 
@@ -83,11 +83,13 @@
             this.btn_Saetze.TabIndex = 4;
             this.btn_Saetze.Text = "Sätze";
             this.btn_Saetze.UseVisualStyleBackColor = true;
-            this.btn_Saetze.Click += new System.EventHandler(this.btn_sentences_Click);
+            this.btn_Saetze.Click += new System.EventHandler(this.btn_Sentences_Click);
             // 
             // mainWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::learnLatin.Properties.Resources.roman_city;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(796, 473);
             this.Controls.Add(this.btn_Saetze);
             this.Controls.Add(this.btn_AndereWoerter);
