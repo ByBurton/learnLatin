@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>adler_der_neunten_legion_adler_standarte_Fpj_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
@@ -122,6 +125,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\roman_city.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adler_der_neunten_legion_adler_standarte_Fpj_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adler_der_neunten_legion_adler_standarte_Fpj_icon.ico" />
+    <None Include="Resources\usedRessources.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

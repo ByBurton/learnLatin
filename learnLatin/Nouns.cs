@@ -24,9 +24,9 @@ namespace learnLatin
             InitializeComponent();
         }
 
-        private void nouns_Load(Object sender, EventArgs e)
+        private void Nouns_Load(object sender, EventArgs e)
         {
-            this.fillNomensListeFromTextFile();
+            this.FillNomensListeFromTextFile();
 
             if(this.NomensListe.Count == 0)
                 FillNomenListWithDefaults();
@@ -42,16 +42,16 @@ namespace learnLatin
             this.NomensListe.Add(new Nomen("forum", "fori", "foro", "forum", "foro", "fora", "fororum", "foris", "fora", "foris", "Marktplatz, Forum, Öffentlichkeit"));
         }
 
-        private void btn_NaechstesNomen_Click(Object sender, EventArgs e)
+        private void Btn_NaechstesNomen_Click(object sender, EventArgs e)
         {
             this.ausgewaehltesNomen = CollectionExtension.RandomElement(this.NomensListe);
 
             this.txtBox_NominativSingular.Text = this.ausgewaehltesNomen.NominativSingular;
 
-            this.clearTextBoxes();
+            this.ClearTextBoxes();
         }
 
-        private void clearTextBoxes()
+        private void ClearTextBoxes()
         {
             this.txtBox_ZuDeutsch.Text = String.Empty;
 
@@ -67,7 +67,7 @@ namespace learnLatin
             this.txtBox_AblativPlural.Text = String.Empty;
         }
 
-        private void btn_LueckenFuellen_Click(Object sender, EventArgs e)
+        private void Btn_LueckenFuellen_Click(object sender, EventArgs e)
         {
             this.txtBox_ZuDeutsch.Text = this.ausgewaehltesNomen.ZuDeutsch;
 
@@ -85,22 +85,22 @@ namespace learnLatin
 
 
 
-        private void saveNomensListeAsTextFile()
+        private void SaveNomensListeAsTextFile()
         {
             if(!Directory.Exists(@"C:\ProgramData\learnLatin"))
                 Directory.CreateDirectory(@"C:\ProgramData\learnLatin");
 
-            FileStream stream = new FileStream(@"C:\ProgramData\learnLatin\Nomen.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter writer = new StreamWriter(stream);
+            var stream = new FileStream(@"C:\ProgramData\learnLatin\Nomen.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            var writer = new StreamWriter(stream);
 
 
             foreach(Nomen nomen in this.NomensListe)
             {
-                String line = String.Empty;
+                var line = String.Empty;
 
-                String singular = nomen.NominativSingular + ";" + nomen.GenitivSingular + ";" + nomen.DativSingular + ";" + nomen.AkkusativSingular + ";" +
+                var singular = nomen.NominativSingular + ";" + nomen.GenitivSingular + ";" + nomen.DativSingular + ";" + nomen.AkkusativSingular + ";" +
                     nomen.AblativSingular + ";" + nomen.VokativSingular + ";" + nomen.LokativSingular + "#";
-                String plural = nomen.NominativPlural + ";" + nomen.GenitivPlural + ";" + nomen.DativPlural + ";" + nomen.AkkusativPlural + ";" + nomen.AblativPlural + ";" + nomen.VokativPlural + ";" + nomen.LokativPlural;
+                var plural = nomen.NominativPlural + ";" + nomen.GenitivPlural + ";" + nomen.DativPlural + ";" + nomen.AkkusativPlural + ";" + nomen.AblativPlural + ";" + nomen.VokativPlural + ";" + nomen.LokativPlural;
 
                 line = singular + plural + "#" + nomen.ZuDeutsch;
 
@@ -111,7 +111,7 @@ namespace learnLatin
             stream.Close();
         }
 
-        private void fillNomensListeFromTextFile()
+        private void FillNomensListeFromTextFile()
         {
             if(!Directory.Exists(@"C:\ProgramData\learnLatin"))
                 Directory.CreateDirectory(@"C:\ProgramData\learnLatin");
@@ -121,19 +121,19 @@ namespace learnLatin
 
             this.NomensListe.Clear();
 
-            FileStream stream = new FileStream(@"C:\ProgramData\learnLatin\Nomen.txt", FileMode.Open, FileAccess.Read);
-            StreamReader reader = new StreamReader(stream);
+            var stream = new FileStream(@"C:\ProgramData\learnLatin\Nomen.txt", FileMode.Open, FileAccess.Read);
+            var reader = new StreamReader(stream);
 
-            String line = String.Empty;
+            var line = String.Empty;
 
             while((line = reader.ReadLine()) != null)
             {
-                Nomen nomen = new Nomen(String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty,
+                var nomen = new Nomen(String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty,
                     String.Empty, String.Empty, String.Empty);
 
-                String[] singular = line.Split('#')[0].Split(';');
-                String[] plural = line.Split('#')[1].Split(';');
-                String zuDeutsch = line.Split('#')[2];
+                var singular = line.Split('#')[0].Split(';');
+                var plural = line.Split('#')[1].Split(';');
+                var zuDeutsch = line.Split('#')[2];
 
                 nomen.NominativSingular = singular[0];
                 nomen.GenitivSingular = singular[1];
@@ -161,14 +161,11 @@ namespace learnLatin
             stream.Close();
         }
 
-        private void Nouns_FormClosing(Object sender, FormClosingEventArgs e)
-        {
-            this.saveNomensListeAsTextFile();
-        }
+        private void Nouns_FormClosing(object sender, FormClosingEventArgs e) => this.SaveNomensListeAsTextFile();
 
-        private void btn_NomenHinzufuegen_Click(Object sender, EventArgs e)
+        private void Btn_NomenHinzufuegen_Click(object sender, EventArgs e)
         {
-            Nomen nomen = new Nomen(this.txtBox_NominativSingular.Text, this.txtBox_GenitivSingular.Text, this.txtBox_DativSingular.Text, this.txtBox_AkkusativSingular.Text,
+            var nomen = new Nomen(this.txtBox_NominativSingular.Text, this.txtBox_GenitivSingular.Text, this.txtBox_DativSingular.Text, this.txtBox_AkkusativSingular.Text,
                 this.txtBox_AblativSingular.Text, this.txtBox_NominativPlural.Text, this.txtBox_GenitivPlural.Text, this.txtBox_DativPlural.Text, this.txtBox_AkkusativPlural.Text,
                 this.txtBox_AblativPlural.Text, this.txtBox_ZuDeutsch.Text);
 
@@ -178,7 +175,7 @@ namespace learnLatin
             this.NomensListe.Add(nomen);
             nomen = null;
 
-            this.saveNomensListeAsTextFile();
+            this.SaveNomensListeAsTextFile();
 
             MessageBox.Show("Das Nomen wurde erfolgreich hinzugefügt!");
 
@@ -195,40 +192,40 @@ namespace learnLatin
 
     public class Nomen
     {
-        public String ZuDeutsch;
+        public string ZuDeutsch;
 
-        public String NominativSingular;
-        public String GenitivSingular;
-        public String DativSingular;
-        public String AkkusativSingular;
-        public String AblativSingular;
+        public string NominativSingular;
+        public string GenitivSingular;
+        public string DativSingular;
+        public string AkkusativSingular;
+        public string AblativSingular;
 
-        public String LokativSingular;
-        public String VokativSingular;
+        public string LokativSingular;
+        public string VokativSingular;
 
-        public String NominativPlural;
-        public String GenitivPlural;
-        public String DativPlural;
-        public String AkkusativPlural;
-        public String AblativPlural;
+        public string NominativPlural;
+        public string GenitivPlural;
+        public string DativPlural;
+        public string AkkusativPlural;
+        public string AblativPlural;
 
-        public String LokativPlural;
-        public String VokativPlural;
+        public string LokativPlural;
+        public string VokativPlural;
 
 
-        public void AddLokativ(String singular, String plural)
+        public void AddLokativ(string singular, string plural)
         {
             this.LokativSingular = singular;
             this.LokativPlural = plural;
         }
-        public void AddVokativ(String singular, String plural)
+        public void AddVokativ(string singular, string plural)
         {
             this.VokativSingular = singular;
             this.VokativPlural = plural;
         }
 
-        public Nomen(String NominativSingular, String GenitivSingular, String DativSingular, String AkkusativSingular, String AblativSingular,
-            String NominativPlural, String GenitivPlural, String DativPlural, String AkkusativPlural, String AblativPlural, String ZuDeutsch)
+        public Nomen(string NominativSingular, string GenitivSingular, string DativSingular, string AkkusativSingular, string AblativSingular,
+            string NominativPlural, string GenitivPlural, string DativPlural, string AkkusativPlural, string AblativPlural, string ZuDeutsch)
         {
             this.ZuDeutsch = ZuDeutsch;
 

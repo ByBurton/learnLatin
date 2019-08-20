@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vocabulary));
             this.lbl_Lateinisch = new System.Windows.Forms.Label();
             this.lbl_Deutsch = new System.Windows.Forms.Label();
             this.txtBox_Lateinisch = new System.Windows.Forms.TextBox();
@@ -77,7 +78,7 @@
             this.btn_WortHinzufuegen.TabIndex = 4;
             this.btn_WortHinzufuegen.Text = "Wort hinzufügen";
             this.btn_WortHinzufuegen.UseVisualStyleBackColor = true;
-            this.btn_WortHinzufuegen.Click += new System.EventHandler(this.btn_WortHinzufuegen_Click);
+            this.btn_WortHinzufuegen.Click += new System.EventHandler(this.Btn_WortHinzufuegen_Click);
             // 
             // btn_NaechstesWort
             // 
@@ -87,7 +88,7 @@
             this.btn_NaechstesWort.TabIndex = 5;
             this.btn_NaechstesWort.Text = "Nächstes Wort";
             this.btn_NaechstesWort.UseVisualStyleBackColor = true;
-            this.btn_NaechstesWort.Click += new System.EventHandler(this.btn_NaechstesWort_Click);
+            this.btn_NaechstesWort.Click += new System.EventHandler(this.Btn_NaechstesWort_Click);
             // 
             // btn_Aufdecken
             // 
@@ -97,7 +98,7 @@
             this.btn_Aufdecken.TabIndex = 6;
             this.btn_Aufdecken.Text = "Aufdecken";
             this.btn_Aufdecken.UseVisualStyleBackColor = true;
-            this.btn_Aufdecken.Click += new System.EventHandler(this.btn_Aufdecken_Click);
+            this.btn_Aufdecken.Click += new System.EventHandler(this.Btn_Aufdecken_Click);
             // 
             // Vocabulary
             // 
@@ -113,6 +114,7 @@
             this.Controls.Add(this.txtBox_Lateinisch);
             this.Controls.Add(this.lbl_Deutsch);
             this.Controls.Add(this.lbl_Lateinisch);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Vocabulary";
             this.Text = "Vokabeltrainer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Other_Words_FormClosing);

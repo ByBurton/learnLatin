@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sentences));
             this.btn_Aufdecken = new System.Windows.Forms.Button();
             this.btn_NaechsterSatz = new System.Windows.Forms.Button();
             this.btn_SatzHinzufuegen = new System.Windows.Forms.Button();
@@ -39,80 +40,73 @@
             // 
             // btn_Aufdecken
             // 
-            this.btn_Aufdecken.Location = new System.Drawing.Point(725, 266);
-            this.btn_Aufdecken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Aufdecken.Location = new System.Drawing.Point(544, 216);
             this.btn_Aufdecken.Name = "btn_Aufdecken";
-            this.btn_Aufdecken.Size = new System.Drawing.Size(149, 28);
+            this.btn_Aufdecken.Size = new System.Drawing.Size(112, 23);
             this.btn_Aufdecken.TabIndex = 9;
             this.btn_Aufdecken.Text = "Aufdecken";
             this.btn_Aufdecken.UseVisualStyleBackColor = true;
-            this.btn_Aufdecken.Click += new System.EventHandler(this.btn_Aufdecken_Click);
+            this.btn_Aufdecken.Click += new System.EventHandler(this.Btn_Aufdecken_Click);
             // 
             // btn_NaechsterSatz
             // 
-            this.btn_NaechsterSatz.Location = new System.Drawing.Point(725, 315);
-            this.btn_NaechsterSatz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_NaechsterSatz.Location = new System.Drawing.Point(544, 256);
             this.btn_NaechsterSatz.Name = "btn_NaechsterSatz";
-            this.btn_NaechsterSatz.Size = new System.Drawing.Size(149, 28);
+            this.btn_NaechsterSatz.Size = new System.Drawing.Size(112, 23);
             this.btn_NaechsterSatz.TabIndex = 8;
             this.btn_NaechsterSatz.Text = "Nächster Satz";
             this.btn_NaechsterSatz.UseVisualStyleBackColor = true;
-            this.btn_NaechsterSatz.Click += new System.EventHandler(this.btn_NaechsterSatz_Click);
+            this.btn_NaechsterSatz.Click += new System.EventHandler(this.Btn_NaechsterSatz_Click);
             // 
             // btn_SatzHinzufuegen
             // 
-            this.btn_SatzHinzufuegen.Location = new System.Drawing.Point(715, 364);
-            this.btn_SatzHinzufuegen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SatzHinzufuegen.Location = new System.Drawing.Point(536, 296);
             this.btn_SatzHinzufuegen.Name = "btn_SatzHinzufuegen";
-            this.btn_SatzHinzufuegen.Size = new System.Drawing.Size(160, 28);
+            this.btn_SatzHinzufuegen.Size = new System.Drawing.Size(120, 23);
             this.btn_SatzHinzufuegen.TabIndex = 7;
             this.btn_SatzHinzufuegen.Text = "Satz hinzufügen";
             this.btn_SatzHinzufuegen.UseVisualStyleBackColor = true;
-            this.btn_SatzHinzufuegen.Click += new System.EventHandler(this.btn_SatzHinzufuegen_Click);
+            this.btn_SatzHinzufuegen.Click += new System.EventHandler(this.Btn_SatzHinzufuegen_Click);
             // 
             // txtBox_Deutsch
             // 
-            this.txtBox_Deutsch.Location = new System.Drawing.Point(32, 148);
-            this.txtBox_Deutsch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBox_Deutsch.Location = new System.Drawing.Point(24, 120);
             this.txtBox_Deutsch.Name = "txtBox_Deutsch";
-            this.txtBox_Deutsch.Size = new System.Drawing.Size(841, 22);
+            this.txtBox_Deutsch.Size = new System.Drawing.Size(632, 20);
             this.txtBox_Deutsch.TabIndex = 13;
             // 
             // txtBox_Lateinisch
             // 
-            this.txtBox_Lateinisch.Location = new System.Drawing.Point(32, 59);
-            this.txtBox_Lateinisch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBox_Lateinisch.Location = new System.Drawing.Point(24, 48);
             this.txtBox_Lateinisch.Name = "txtBox_Lateinisch";
-            this.txtBox_Lateinisch.Size = new System.Drawing.Size(841, 22);
+            this.txtBox_Lateinisch.Size = new System.Drawing.Size(632, 20);
             this.txtBox_Lateinisch.TabIndex = 12;
             // 
             // lbl_Deutsch
             // 
             this.lbl_Deutsch.AutoSize = true;
-            this.lbl_Deutsch.Location = new System.Drawing.Point(32, 118);
-            this.lbl_Deutsch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Deutsch.Location = new System.Drawing.Point(24, 96);
             this.lbl_Deutsch.Name = "lbl_Deutsch";
-            this.lbl_Deutsch.Size = new System.Drawing.Size(60, 17);
+            this.lbl_Deutsch.Size = new System.Drawing.Size(47, 13);
             this.lbl_Deutsch.TabIndex = 11;
             this.lbl_Deutsch.Text = "Deutsch";
             // 
             // lbl_Lateinisch
             // 
             this.lbl_Lateinisch.AutoSize = true;
-            this.lbl_Lateinisch.Location = new System.Drawing.Point(32, 30);
-            this.lbl_Lateinisch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Lateinisch.Location = new System.Drawing.Point(24, 24);
             this.lbl_Lateinisch.Name = "lbl_Lateinisch";
-            this.lbl_Lateinisch.Size = new System.Drawing.Size(72, 17);
+            this.lbl_Lateinisch.Size = new System.Drawing.Size(55, 13);
             this.lbl_Lateinisch.TabIndex = 10;
             this.lbl_Lateinisch.Text = "Lateinisch";
             // 
             // Sentences
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::learnLatin.Properties.Resources.roman_city;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(909, 501);
+            this.ClientSize = new System.Drawing.Size(682, 407);
             this.Controls.Add(this.txtBox_Deutsch);
             this.Controls.Add(this.txtBox_Lateinisch);
             this.Controls.Add(this.lbl_Deutsch);
@@ -120,7 +114,7 @@
             this.Controls.Add(this.btn_Aufdecken);
             this.Controls.Add(this.btn_NaechsterSatz);
             this.Controls.Add(this.btn_SatzHinzufuegen);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Sentences";
             this.Text = "Sentences";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sentences_FormClosing);

@@ -24,9 +24,9 @@ namespace learnLatin
             InitializeComponent();
         }
 
-        private void Other_Words_Load(Object sender, EventArgs e)
+        private void Other_Words_Load(object sender, EventArgs e)
         {
-            this.fillOtherWordsListFromTextFile();
+            this.FillOtherWordsListFromTextFile();
 
             if(this.OtherWordsList.Count == 0)
                 this.FillOtherWordsListWithDefaults();
@@ -46,12 +46,11 @@ namespace learnLatin
             this.OtherWordsList.Add(new OtherWord("ubi?", "wo?"));
         }
 
-        private void btn_Aufdecken_Click(Object sender, EventArgs e)
-        {
-            this.txtBox_Deutsch.Text = this.ausgewaehltesWort.Deutsch;
-        }
+        private void Btn_Aufdecken_Click(object sender, EventArgs e) => this.txtBox_Deutsch.Text = this.ausgewaehltesWort.Deutsch;
+        private void ClearTextBoxes() => this.txtBox_Deutsch.Text = String.Empty;
+        private void Other_Words_FormClosing(object sender, FormClosingEventArgs e) => this.SaveOtherWordsListAsTextFile();
 
-        private void fillOtherWordsListFromTextFile()
+        private void FillOtherWordsListFromTextFile()
         {
             if(!Directory.Exists(@"C:\ProgramData\learnLatin"))
                 Directory.CreateDirectory(@"C:\ProgramData\learnLatin");
@@ -61,14 +60,14 @@ namespace learnLatin
 
             this.OtherWordsList.Clear();
 
-            FileStream stream = new FileStream(@"C:\ProgramData\learnLatin\OtherWords.txt", FileMode.Open, FileAccess.Read);
-            StreamReader reader = new StreamReader(stream);
+            var stream = new FileStream(@"C:\ProgramData\learnLatin\OtherWords.txt", FileMode.Open, FileAccess.Read);
+            var reader = new StreamReader(stream);
 
-            String line = String.Empty;
+            var line = String.Empty;
 
             while((line = reader.ReadLine()) != null)
             {
-                OtherWord word = new OtherWord(String.Empty, String.Empty);
+                var word = new OtherWord(String.Empty, String.Empty);
 
                 word.Lateinisch = line.Split(';')[0];
                 word.Deutsch = line.Split(';')[1];
@@ -81,18 +80,18 @@ namespace learnLatin
             stream.Close();
         }
 
-        private void saveOtherWordsListAsTextFile()
+        private void SaveOtherWordsListAsTextFile()
         {
             if(!Directory.Exists(@"C:\ProgramData\learnLatin"))
                 Directory.CreateDirectory(@"C:\ProgramData\learnLatin");
 
-            FileStream stream = new FileStream(@"C:\ProgramData\learnLatin\OtherWords.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter writer = new StreamWriter(stream);
+            var stream = new FileStream(@"C:\ProgramData\learnLatin\OtherWords.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            var writer = new StreamWriter(stream);
 
 
             foreach(OtherWord word in this.OtherWordsList)
             {
-                String line = String.Empty;
+                var line = String.Empty;
 
                 line = word.Lateinisch + ";" + word.Deutsch;
 
@@ -103,37 +102,27 @@ namespace learnLatin
             stream.Close();
         }
 
-        private void btn_NaechstesWort_Click(Object sender, EventArgs e)
+        private void Btn_NaechstesWort_Click(object sender, EventArgs e)
         {
             this.ausgewaehltesWort = CollectionExtension.RandomElement(this.OtherWordsList);
 
             this.txtBox_Lateinisch.Text = this.ausgewaehltesWort.Lateinisch;
 
-            this.clearTextBoxes();
+            this.ClearTextBoxes();
         }
 
-        private void btn_WortHinzufuegen_Click(Object sender, EventArgs e)
+        private void Btn_WortHinzufuegen_Click(object sender, EventArgs e)
         {
-            OtherWord word = new OtherWord(this.txtBox_Lateinisch.Text, this.txtBox_Deutsch.Text);
+            var word = new OtherWord(this.txtBox_Lateinisch.Text, this.txtBox_Deutsch.Text);
             this.OtherWordsList.Add(word);
 
             word = null;
 
-            this.saveOtherWordsListAsTextFile();
+            this.SaveOtherWordsListAsTextFile();
 
             MessageBox.Show("Das Wort wurde erfolgreich hinzugefügt!");
 
             this.btn_NaechstesWort.PerformClick();
-        }
-
-        private void clearTextBoxes()
-        {
-            this.txtBox_Deutsch.Text = String.Empty;
-        }
-
-        private void Other_Words_FormClosing(Object sender, FormClosingEventArgs e)
-        {
-            this.saveOtherWordsListAsTextFile();
         }
     }
 
@@ -143,10 +132,10 @@ namespace learnLatin
 
     public class OtherWord
     {
-        public String Lateinisch;
-        public String Deutsch;
+        public string Lateinisch;
+        public string Deutsch;
 
-        public OtherWord(String Lateinisch, String Deutsch)
+        public OtherWord(string Lateinisch, string Deutsch)
         {
             this.Lateinisch = Lateinisch;
             this.Deutsch = Deutsch;

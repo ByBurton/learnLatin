@@ -15,9 +15,9 @@ namespace learnLatin
 {
     public static class BackGroundSoundPlayer
     {
-        public static void Play(String FileName)
+        public static void Play(string FileName)
         {
-            MediaPlayer player = new MediaPlayer();
+            var player = new MediaPlayer();
             player.Open(new Uri(FileName, UriKind.Relative));
             player.Play();
         }
@@ -27,7 +27,7 @@ namespace learnLatin
     {
         public SoundPlayer BackgroundSoundPlayer;
 
-        public BackGroundSound(String wavFile)
+        public BackGroundSound(string wavFile)
         {
             this.BackgroundSoundPlayer = new SoundPlayer(wavFile);
             this.BackgroundSoundPlayer.PlayLooping();

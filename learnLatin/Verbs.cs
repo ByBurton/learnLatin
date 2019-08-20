@@ -24,16 +24,16 @@ namespace learnLatin
             InitializeComponent();
         }
 
-        private void btn_NaechstesVerb_Click(Object sender, EventArgs e)
+        private void Btn_NaechstesVerb_Click(object sender, EventArgs e)
         {
             this.ausgewaehltesVerb = CollectionExtension.RandomElement(this.VerbenListe);
 
             this.txtBox_Infinitiv.Text = this.ausgewaehltesVerb.Infinitiv;
 
-            this.clearTextBoxes();
+            this.ClearTextBoxes();
         }
 
-        private void clearTextBoxes()
+        private void ClearTextBoxes()
         {
             this.txtBox_ZuDeutsch.Text = String.Empty;
 
@@ -120,7 +120,7 @@ namespace learnLatin
             this.txtBox_DrittePersonPluralPlusquamperfektKonjunktiv.Text = String.Empty;
         }
 
-        private void btn_LueckenFuellen_Click(Object sender, EventArgs e)
+        private void Btn_LueckenFuellen_Click(object sender, EventArgs e)
         {
             this.txtBox_ZuDeutsch.Text = this.ausgewaehltesVerb.ZuDeutsch;
 
@@ -222,20 +222,20 @@ namespace learnLatin
             this.VerbenListe[0].SetPlusquamperfektKonjunktiv("properavissem", "properavisses", "properavisset", "properavissemus", "properavissetis", "properavissent");
         }
 
-        private void saveVerbenListeAsTextFile()
+        private void SaveVerbenListeAsTextFile()
         {
             if(!Directory.Exists(@"C:\ProgramData\learnLatin"))
                 Directory.CreateDirectory(@"C:\ProgramData\learnLatin");
 
 
-            FileStream stream = new FileStream(@"C:\ProgramData\learnLatin\Verben.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            StreamWriter writer = new StreamWriter(stream);
+            var stream = new FileStream(@"C:\ProgramData\learnLatin\Verben.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            var writer = new StreamWriter(stream);
 
             foreach(Verb verb in this.VerbenListe)
             {
-                String line = String.Empty;
+                var line = String.Empty;
 
-                String indikativ = verb.Infinitiv + "|" + verb.ErstePersonSingularPraesensIndikativ + ";" + verb.ErstePersonPluralPraesensIndikativ + ";" +
+                var indikativ = verb.Infinitiv + "|" + verb.ErstePersonSingularPraesensIndikativ + ";" + verb.ErstePersonPluralPraesensIndikativ + ";" +
                     verb.ZweitePersonSingularPraesensIndikativ + ";" + verb.ZweitePersonPluralPraesensIndikativ + ";" + verb.DrittePersonSingularPraesensIndikativ + ";" +
                     verb.DrittePersonPluralPraesensIndikativ + "#" + verb.ErstePersonSingularPerfektIndikativ + ";" + verb.ErstePersonPluralPerfektIndikativ + ";" +
                     verb.ZweitePersonSingularPerfektIndikativ + ";" + verb.ZweitePersonPluralPerfektIndikativ + ";" + verb.DrittePersonSingularPerfektIndikativ + ";" +
@@ -249,7 +249,7 @@ namespace learnLatin
                     verb.ZweitePersonSingularFutur_II_Indikativ + ";" + verb.ZweitePersonPluralFutur_II_Indikativ + ";" + verb.DrittePersonSingularFutur_II_Indikativ + ";" +
                     verb.DrittePersonPluralFutur_II_Indikativ + "|";
 
-                String konjunktiv = verb.ErstePersonSingularPraesensKonjunktiv + ";" + verb.ErstePersonPluralPraesensKonjunktiv + ";" +
+                var konjunktiv = verb.ErstePersonSingularPraesensKonjunktiv + ";" + verb.ErstePersonPluralPraesensKonjunktiv + ";" +
                     verb.ZweitePersonSingularPraesensKonjunktiv + ";" + verb.ZweitePersonPluralPraesensKonjunktiv + ";" + verb.DrittePersonSingularPraesensKonjunktiv + ";" +
                     verb.DrittePersonPluralPraesensKonjunktiv + "#" + verb.ErstePersonSingularPerfektKonjunktiv + ";" + verb.ErstePersonPluralPerfektKonjunktiv + ";" +
                     verb.ZweitePersonSingularPerfektKonjunktiv + ";" + verb.ZweitePersonPluralPerfektKonjunktiv + ";" + verb.DrittePersonSingularPerfektKonjunktiv + ";" +
@@ -268,7 +268,7 @@ namespace learnLatin
             stream.Close();
         }
 
-        private void fillVerbenListeFromTextFile()
+        private void FillVerbenListeFromTextFile()
         {
             if(!Directory.Exists(@"C:\ProgramData\learnLatin"))
                 Directory.CreateDirectory(@"C:\ProgramData\learnLatin");
@@ -278,30 +278,30 @@ namespace learnLatin
 
             this.VerbenListe.Clear();
 
-            FileStream stream = new FileStream(@"C:\ProgramData\learnLatin\Verben.txt", FileMode.Open, FileAccess.Read);
-            StreamReader reader = new StreamReader(stream);
+            var stream = new FileStream(@"C:\ProgramData\learnLatin\Verben.txt", FileMode.Open, FileAccess.Read);
+            var reader = new StreamReader(stream);
 
-            String line;
+            string line;
             Verb verb;
 
 
 
             while((line = reader.ReadLine()) != null)
             {
-                String infinitiv = line.Split('|')[0];
-                String zuDeutsch = line.Split('|')[3];
-                String indikativString = line.Split('|')[1];
-                String konjunktivString = line.Split('|')[2];
+                var infinitiv = line.Split('|')[0];
+                var zuDeutsch = line.Split('|')[3];
+                var indikativString = line.Split('|')[1];
+                var konjunktivString = line.Split('|')[2];
 
                 verb = new Verb(infinitiv, zuDeutsch);
 
-                String praesens = indikativString.Split('#')[0];
-                String perfekt = indikativString.Split('#')[1];
-                String imperfekt = indikativString.Split('#')[2];
-                String plusquamperfekt = indikativString.Split('#')[3];
-                String futur_I = indikativString.Split('#')[4];
-                String futur_II = indikativString.Split('#')[5];
-
+                var praesens = indikativString.Split('#')[0];
+                var perfekt = indikativString.Split('#')[1];
+                var imperfekt = indikativString.Split('#')[2];
+                var plusquamperfekt = indikativString.Split('#')[3];
+                var futur_I = indikativString.Split('#')[4];
+                var futur_II = indikativString.Split('#')[5];
+                    
                 verb.SetPraesensIndikativ(praesens.Split(';')[0], praesens.Split(';')[1], praesens.Split(';')[2], praesens.Split(';')[3], praesens.Split(';')[4],
                     praesens.Split(';')[5]);
                 verb.SetPerfektIndikativ(perfekt.Split(';')[0], perfekt.Split(';')[1], perfekt.Split(';')[2], perfekt.Split(';')[3], perfekt.Split(';')[4], perfekt.Split(';')[5]);
@@ -334,9 +334,9 @@ namespace learnLatin
             stream.Close();
         }
 
-        private void Verbs_Load(Object sender, EventArgs e)
+        private void Verbs_Load(object sender, EventArgs e)
         {
-            this.fillVerbenListeFromTextFile();
+            this.FillVerbenListeFromTextFile();
 
             if(this.VerbenListe.Count== 0)
                 FillVerbenListeWithDefaults();
@@ -344,14 +344,11 @@ namespace learnLatin
             this.btn_NaechstesVerb.PerformClick();
         }
 
-        private void Verbs_FormClosing(Object sender, FormClosingEventArgs e)
-        {
-            this.saveVerbenListeAsTextFile();
-        }
+        private void Verbs_FormClosing(object sender, FormClosingEventArgs e) => this.SaveVerbenListeAsTextFile();
 
-        private void btn_VerbHinzufuegen_Click(Object sender, EventArgs e)
+        private void Btn_VerbHinzufuegen_Click(object sender, EventArgs e)
         {
-            Verb verb = new Verb(this.txtBox_Infinitiv.Text, this.txtBox_ZuDeutsch.Text);
+            var verb = new Verb(this.txtBox_Infinitiv.Text, this.txtBox_ZuDeutsch.Text);
 
             //Indikativ
             verb.SetPraesensIndikativ(this.txtBox_ErstePersonSingularPraesensIndikativ.Text, this.txtBox_ErstePersonPluralPraesensIndikativ.Text,
@@ -401,7 +398,7 @@ namespace learnLatin
             this.VerbenListe.Add(verb);
             verb = null;
 
-            this.saveVerbenListeAsTextFile();
+            this.SaveVerbenListeAsTextFile();
 
             MessageBox.Show("Das Verb wurde erfolgreich hinzugefügt!");
 
@@ -422,94 +419,94 @@ namespace learnLatin
 
     public class Verb
     {
-        public String Infinitiv;
-        public String ZuDeutsch;
+        public string Infinitiv;
+        public string ZuDeutsch;
 
         //Indikativ
         //Praesens
-        public String ErstePersonSingularPraesensIndikativ;
-        public String ErstePersonPluralPraesensIndikativ;
-        public String ZweitePersonSingularPraesensIndikativ;
-        public String ZweitePersonPluralPraesensIndikativ;
-        public String DrittePersonSingularPraesensIndikativ;
-        public String DrittePersonPluralPraesensIndikativ;
+        public string ErstePersonSingularPraesensIndikativ;
+        public string ErstePersonPluralPraesensIndikativ;
+        public string ZweitePersonSingularPraesensIndikativ;
+        public string ZweitePersonPluralPraesensIndikativ;
+        public string DrittePersonSingularPraesensIndikativ;
+        public string DrittePersonPluralPraesensIndikativ;
 
         //Perfekt
-        public String ErstePersonSingularPerfektIndikativ;
-        public String ErstePersonPluralPerfektIndikativ;
-        public String ZweitePersonSingularPerfektIndikativ;
-        public String ZweitePersonPluralPerfektIndikativ;
-        public String DrittePersonSingularPerfektIndikativ;
-        public String DrittePersonPluralPerfektIndikativ;
+        public string ErstePersonSingularPerfektIndikativ;
+        public string ErstePersonPluralPerfektIndikativ;
+        public string ZweitePersonSingularPerfektIndikativ;
+        public string ZweitePersonPluralPerfektIndikativ;
+        public string DrittePersonSingularPerfektIndikativ;
+        public string DrittePersonPluralPerfektIndikativ;
 
         //Imperfekt
-        public String ErstePersonSingularImperfektIndikativ;
-        public String ErstePersonPluralImperfektIndikativ;
-        public String ZweitePersonSingularImperfektIndikativ;
-        public String ZweitePersonPluralImperfektIndikativ;
-        public String DrittePersonSingularImperfektIndikativ;
-        public String DrittePersonPluralImperfektIndikativ;
+        public string ErstePersonSingularImperfektIndikativ;
+        public string ErstePersonPluralImperfektIndikativ;
+        public string ZweitePersonSingularImperfektIndikativ;
+        public string ZweitePersonPluralImperfektIndikativ;
+        public string DrittePersonSingularImperfektIndikativ;
+        public string DrittePersonPluralImperfektIndikativ;
 
         //Plusquamperfekt
-        public String ErstePersonSingularPlusquamperfektIndikativ;
-        public String ErstePersonPluralPlusquamperfektIndikativ;
-        public String ZweitePersonSingularPlusquamperfektIndikativ;
-        public String ZweitePersonPluralPlusquamperfektIndikativ;
-        public String DrittePersonSingularPlusquamperfektIndikativ;
-        public String DrittePersonPluralPlusquamperfektIndikativ;
+        public string ErstePersonSingularPlusquamperfektIndikativ;
+        public string ErstePersonPluralPlusquamperfektIndikativ;
+        public string ZweitePersonSingularPlusquamperfektIndikativ;
+        public string ZweitePersonPluralPlusquamperfektIndikativ;
+        public string DrittePersonSingularPlusquamperfektIndikativ;
+        public string DrittePersonPluralPlusquamperfektIndikativ;
 
         //Futur I
-        public String ErstePersonSingularFutur_I_Indikativ;
-        public String ErstePersonPluralFutur_I_Indikativ;
-        public String ZweitePersonSingularFutur_I_Indikativ;
-        public String ZweitePersonPluralFutur_I_Indikativ;
-        public String DrittePersonSingularFutur_I_Indikativ;
-        public String DrittePersonPluralFutur_I_Indikativ;
+        public string ErstePersonSingularFutur_I_Indikativ;
+        public string ErstePersonPluralFutur_I_Indikativ;
+        public string ZweitePersonSingularFutur_I_Indikativ;
+        public string ZweitePersonPluralFutur_I_Indikativ;
+        public string DrittePersonSingularFutur_I_Indikativ;
+        public string DrittePersonPluralFutur_I_Indikativ;
 
         //Futur II
-        public String ErstePersonSingularFutur_II_Indikativ;
-        public String ErstePersonPluralFutur_II_Indikativ;
-        public String ZweitePersonSingularFutur_II_Indikativ;
-        public String ZweitePersonPluralFutur_II_Indikativ;
-        public String DrittePersonSingularFutur_II_Indikativ;
-        public String DrittePersonPluralFutur_II_Indikativ;
+        public string ErstePersonSingularFutur_II_Indikativ;
+        public string ErstePersonPluralFutur_II_Indikativ;
+        public string ZweitePersonSingularFutur_II_Indikativ;
+        public string ZweitePersonPluralFutur_II_Indikativ;
+        public string DrittePersonSingularFutur_II_Indikativ;
+        public string DrittePersonPluralFutur_II_Indikativ;
 
 
         //Konjunktiv
         //Praesens
-        public String ErstePersonSingularPraesensKonjunktiv;
-        public String ErstePersonPluralPraesensKonjunktiv;
-        public String ZweitePersonSingularPraesensKonjunktiv;
-        public String ZweitePersonPluralPraesensKonjunktiv;
-        public String DrittePersonSingularPraesensKonjunktiv;
-        public String DrittePersonPluralPraesensKonjunktiv;
+        public string ErstePersonSingularPraesensKonjunktiv;
+        public string ErstePersonPluralPraesensKonjunktiv;
+        public string ZweitePersonSingularPraesensKonjunktiv;
+        public string ZweitePersonPluralPraesensKonjunktiv;
+        public string DrittePersonSingularPraesensKonjunktiv;
+        public string DrittePersonPluralPraesensKonjunktiv;
 
         //Perfekt
-        public String ErstePersonSingularPerfektKonjunktiv;
-        public String ErstePersonPluralPerfektKonjunktiv;
-        public String ZweitePersonSingularPerfektKonjunktiv;
-        public String ZweitePersonPluralPerfektKonjunktiv;
-        public String DrittePersonSingularPerfektKonjunktiv;
-        public String DrittePersonPluralPerfektKonjunktiv;
+        public string ErstePersonSingularPerfektKonjunktiv;
+        public string ErstePersonPluralPerfektKonjunktiv;
+        public string ZweitePersonSingularPerfektKonjunktiv;
+        public string ZweitePersonPluralPerfektKonjunktiv;
+        public string DrittePersonSingularPerfektKonjunktiv;
+        public string DrittePersonPluralPerfektKonjunktiv;
 
         //Imperfekt
-        public String ErstePersonSingularImperfektKonjunktiv;
-        public String ErstePersonPluralImperfektKonjunktiv;
-        public String ZweitePersonSingularImperfektKonjunktiv;
-        public String ZweitePersonPluralImperfektKonjunktiv;
-        public String DrittePersonSingularImperfektKonjunktiv;
-        public String DrittePersonPluralImperfektKonjunktiv;
+        public string ErstePersonSingularImperfektKonjunktiv;
+        public string ErstePersonPluralImperfektKonjunktiv;
+        public string ZweitePersonSingularImperfektKonjunktiv;
+        public string ZweitePersonPluralImperfektKonjunktiv;
+        public string DrittePersonSingularImperfektKonjunktiv;
+        public string DrittePersonPluralImperfektKonjunktiv;
 
         //Plusquamperfekt
-        public String ErstePersonSingularPlusquamperfektKonjunktiv;
-        public String ErstePersonPluralPlusquamperfektKonjunktiv;
-        public String ZweitePersonSingularPlusquamperfektKonjunktiv;
-        public String ZweitePersonPluralPlusquamperfektKonjunktiv;
-        public String DrittePersonSingularPlusquamperfektKonjunktiv;
-        public String DrittePersonPluralPlusquamperfektKonjunktiv; 
+        public string ErstePersonSingularPlusquamperfektKonjunktiv;
+        public string ErstePersonPluralPlusquamperfektKonjunktiv;
+        public string ZweitePersonSingularPlusquamperfektKonjunktiv;
+        public string ZweitePersonPluralPlusquamperfektKonjunktiv;
+        public string DrittePersonSingularPlusquamperfektKonjunktiv;
+        public string DrittePersonPluralPlusquamperfektKonjunktiv; 
 
-        public void SetPraesensIndikativ(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetPraesensIndikativ(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularPraesensIndikativ = ErstePersonSingular;
             this.ErstePersonPluralPraesensIndikativ = ErstePersonPlural;
@@ -519,8 +516,8 @@ namespace learnLatin
             this.DrittePersonPluralPraesensIndikativ = DrittePersonPlural;
         }
 
-        public void SetPerfektIndikativ(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetPerfektIndikativ(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularPerfektIndikativ = ErstePersonSingular;
             this.ErstePersonPluralPerfektIndikativ = ErstePersonPlural;
@@ -530,8 +527,8 @@ namespace learnLatin
             this.DrittePersonPluralPerfektIndikativ = DrittePersonPlural;
         }
 
-        public void SetImperfektIndikativ(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetImperfektIndikativ(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularImperfektIndikativ = ErstePersonSingular;
             this.ErstePersonPluralImperfektIndikativ = ErstePersonPlural;
@@ -541,8 +538,8 @@ namespace learnLatin
             this.DrittePersonPluralImperfektIndikativ = DrittePersonPlural;
         }
 
-        public void SetPlusquamperfektIndikativ(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetPlusquamperfektIndikativ(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularPlusquamperfektIndikativ = ErstePersonSingular;
             this.ErstePersonPluralPlusquamperfektIndikativ = ErstePersonPlural;
@@ -552,8 +549,8 @@ namespace learnLatin
             this.DrittePersonPluralPlusquamperfektIndikativ = DrittePersonPlural;
         }
 
-        public void SetFutur_I_Indikativ(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetFutur_I_Indikativ(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularFutur_I_Indikativ = ErstePersonSingular;
             this.ErstePersonPluralFutur_I_Indikativ = ErstePersonPlural;
@@ -563,8 +560,8 @@ namespace learnLatin
             this.DrittePersonPluralFutur_I_Indikativ = DrittePersonPlural;
         }
 
-        public void SetFutur_II_Indikativ(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetFutur_II_Indikativ(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularFutur_II_Indikativ = ErstePersonSingular;
             this.ErstePersonPluralFutur_II_Indikativ = ErstePersonPlural;
@@ -574,8 +571,8 @@ namespace learnLatin
             this.DrittePersonPluralFutur_II_Indikativ = DrittePersonPlural;
         }
 
-        public void SetPraesensKonjunktiv(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetPraesensKonjunktiv(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularPraesensKonjunktiv = ErstePersonSingular;
             this.ErstePersonPluralPraesensKonjunktiv = ErstePersonPlural;
@@ -585,8 +582,8 @@ namespace learnLatin
             this.DrittePersonPluralPraesensKonjunktiv = DrittePersonPlural;
         }
 
-        public void SetPerfektKonjunktiv(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetPerfektKonjunktiv(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularPerfektKonjunktiv = ErstePersonSingular;
             this.ErstePersonPluralPerfektKonjunktiv = ErstePersonPlural;
@@ -596,8 +593,8 @@ namespace learnLatin
             this.DrittePersonPluralPerfektKonjunktiv = DrittePersonPlural;
         }
 
-        public void SetImperfektKonjunktiv(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetImperfektKonjunktiv(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularImperfektKonjunktiv = ErstePersonSingular;
             this.ErstePersonPluralImperfektKonjunktiv = ErstePersonPlural;
@@ -607,8 +604,8 @@ namespace learnLatin
             this.DrittePersonPluralImperfektKonjunktiv = DrittePersonPlural;
         }
 
-        public void SetPlusquamperfektKonjunktiv(String ErstePersonSingular, String ErstePersonPlural, String ZweitePersonSingular, String ZweitePersonPlural,
-            String DrittePersonSingular, String DrittePersonPlural)
+        public void SetPlusquamperfektKonjunktiv(string ErstePersonSingular, string ErstePersonPlural, string ZweitePersonSingular, string ZweitePersonPlural,
+            string DrittePersonSingular, string DrittePersonPlural)
         {
             this.ErstePersonSingularPlusquamperfektKonjunktiv = ErstePersonSingular;
             this.ErstePersonPluralPlusquamperfektKonjunktiv = ErstePersonPlural;
@@ -619,7 +616,7 @@ namespace learnLatin
         }
 
 
-        public Verb(String Infinitiv, String ZuDeutsch)
+        public Verb(string Infinitiv, string ZuDeutsch)
         {
             this.Infinitiv = Infinitiv;
             this.ZuDeutsch = ZuDeutsch;

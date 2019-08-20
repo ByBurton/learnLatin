@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.btn_Nomen = new System.Windows.Forms.Button();
             this.btn_Verben = new System.Windows.Forms.Button();
             this.btn_Adjektive = new System.Windows.Forms.Button();
@@ -43,7 +44,7 @@
             this.btn_Nomen.TabIndex = 0;
             this.btn_Nomen.Text = "Nomen";
             this.btn_Nomen.UseVisualStyleBackColor = true;
-            this.btn_Nomen.Click += new System.EventHandler(this.btn_Nouns_Click);
+            this.btn_Nomen.Click += new System.EventHandler(this.Btn_Nouns_Click);
             // 
             // btn_Verben
             // 
@@ -53,7 +54,7 @@
             this.btn_Verben.TabIndex = 1;
             this.btn_Verben.Text = "Verben";
             this.btn_Verben.UseVisualStyleBackColor = true;
-            this.btn_Verben.Click += new System.EventHandler(this.btn_Verbs_Click);
+            this.btn_Verben.Click += new System.EventHandler(this.Btn_Verbs_Click);
             // 
             // btn_Adjektive
             // 
@@ -63,7 +64,7 @@
             this.btn_Adjektive.TabIndex = 2;
             this.btn_Adjektive.Text = "Adjektive";
             this.btn_Adjektive.UseVisualStyleBackColor = true;
-            this.btn_Adjektive.Click += new System.EventHandler(this.btn_Adjectives_Click);
+            this.btn_Adjektive.Click += new System.EventHandler(this.Btn_Adjectives_Click);
             // 
             // btn_AndereWoerter
             // 
@@ -73,7 +74,7 @@
             this.btn_AndereWoerter.TabIndex = 3;
             this.btn_AndereWoerter.Text = "Einzelwörter";
             this.btn_AndereWoerter.UseVisualStyleBackColor = true;
-            this.btn_AndereWoerter.Click += new System.EventHandler(this.btn_OtherWords_Click);
+            this.btn_AndereWoerter.Click += new System.EventHandler(this.Btn_OtherWords_Click);
             // 
             // btn_Saetze
             // 
@@ -83,7 +84,7 @@
             this.btn_Saetze.TabIndex = 4;
             this.btn_Saetze.Text = "Sätze";
             this.btn_Saetze.UseVisualStyleBackColor = true;
-            this.btn_Saetze.Click += new System.EventHandler(this.btn_Sentences_Click);
+            this.btn_Saetze.Click += new System.EventHandler(this.Btn_Sentences_Click);
             // 
             // mainWindow
             // 
@@ -96,9 +97,10 @@
             this.Controls.Add(this.btn_Adjektive);
             this.Controls.Add(this.btn_Verben);
             this.Controls.Add(this.btn_Nomen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainWindow";
             this.Text = "mainWindow";
-            this.Load += new System.EventHandler(this.mainWindow_Load);
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
 
         }

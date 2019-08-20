@@ -61,12 +61,35 @@ namespace learnLatin.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon adler_der_neunten_legion_adler_standarte_Fpj_icon {
+            get {
+                object obj = ResourceManager.GetObject("adler_der_neunten_legion_adler_standarte_Fpj_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap roman_city {
             get {
                 object obj = ResourceManager.GetObject("roman_city", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pictures: &quot;https://imgur.com/gallery/gvIuX#lMfAk8n&quot;
+        ///
+        ///
+        ///
+        ///Music: &quot;https://www.youtube.com/watch?v=KPhfTgayGWQ&quot;; my hugest thanks to MultiMusic.
+        /// </summary>
+        internal static string usedRessources {
+            get {
+                return ResourceManager.GetString("usedRessources", resourceCulture);
             }
         }
     }

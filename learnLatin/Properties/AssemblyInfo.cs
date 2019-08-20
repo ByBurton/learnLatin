@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("learnLatin")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A simple program to learn latin - ALPHA")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("learnLatin")]
