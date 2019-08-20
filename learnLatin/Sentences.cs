@@ -1,4 +1,13 @@
-﻿using System;
+﻿//-------------------------------------------------------------------------------------------------
+//Author: Maederer
+//Company: page one GmbH
+//Created: December, 21st, 2017
+//File: CollectionExtension.cs
+//Short Description: static class to get a random item from a list
+//-------------------------------------------------------------------------------------------------
+
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
