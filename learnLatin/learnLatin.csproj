@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="adler_der_neunten_legion_adler_standarte_Fpj_icon.ico" />
+    <None Include="Resources\Imperium.wav" />
     <None Include="Resources\usedRessources.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
