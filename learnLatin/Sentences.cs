@@ -121,7 +121,7 @@ namespace learnLatin
             this.SentenceList.Add(new Sentence("Senator gaudet et clamat: \"Salvete!\"", "Der Senator freut sich und ruft: \"Seid gegrüßt!\""));
             this.SentenceList.Add(new Sentence("Subito servus adest et rogat: \"Ubi Marcus Aquilius Florus" +
                 "senator est ?\" Turba: \"Ibi est!\"", "Plötzlich kommt ein Sklave hinzu und fragt: \"Wo ist der Senator Marcus Aquilius Florus?\" Menschenmenge: \"Dort ist er!\""));
-            this.SentenceList.Add(new Sentence("Senator ridet, tum in curiam properat.", "Der Senatorlacht, dann eilt er in die Kurie."));
+            this.SentenceList.Add(new Sentence("Senator ridet, tum in curiam properat.", "Der Senator lacht, dann eilt er in die Kurie."));
         }
     }
 
